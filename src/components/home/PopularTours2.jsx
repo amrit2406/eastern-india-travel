@@ -1,0 +1,193 @@
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import { motion } from "framer-motion";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Phone, Eye, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
+
+// Tours Data
+const tours = {
+  northeast: [
+    {
+      id: "meghalaya",
+      name: "Meghalaya Tour",
+      category: "north-east", // 🔹 Added category
+      days: 5,
+      nights: 4,
+      start: "Shillong",
+      end: "Cherrapunji",
+      img: "https://source.unsplash.com/600x400/?meghalaya,india",
+    },
+    {
+      id: "assam-safari",
+      name: "Assam Wildlife Safari",
+      category: "north-east",
+      days: 4,
+      nights: 3,
+      start: "Guwahati",
+      end: "Kaziranga",
+      img: "https://source.unsplash.com/600x400/?assam,india",
+    },
+    {
+      id: "sikkim-adventure",
+      name: "Sikkim Adventure",
+      category: "north-east",
+      days: 6,
+      nights: 5,
+      start: "Gangtok",
+      end: "Lachung",
+      img: "https://source.unsplash.com/600x400/?sikkim,india",
+    },
+    {
+      id: "arunachal",
+      name: "Arunachal Pradesh Tour",
+      category: "north-east",
+      days: 7,
+      nights: 6,
+      start: "Itanagar",
+      end: "Tawang",
+      img: "https://source.unsplash.com/600x400/?mountains,india",
+    },
+    {
+      id: "nagaland-culture",
+      name: "Nagaland Cultural Tour",
+      category: "north-east",
+      days: 5,
+      nights: 4,
+      start: "Kohima",
+      end: "Mokokchung",
+      img: "https://source.unsplash.com/600x400/?nagaland,india",
+    },
+    {
+      id: "tripura-gems",
+      name: "Tripura's Hidden Gems",
+      category: "north-east",
+      days: 4,
+      nights: 3,
+      start: "Agartala",
+      end: "Unakoti",
+      img: "https://source.unsplash.com/600x400/?tripura,india",
+    },
+  ],
+};
+
+const PopularTours2 = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: { staggerChildren: 0.15 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
+  // Tour Card Renderer
+  const renderTourCard = (tour) => (
+    <SwiperSlide key={tour.id}>
+      <motion.div
+        variants={itemVariants}
+        whileHover={{ y: -4 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        className="group relative my-6 rounded-xl overflow-hidden bg-white shadow-sm hover:shadow-md border border-zinc-200 transition-all duration-500"
+      >
+        {/* Image Section */}
+        <div className="relative h-54 w-full overflow-hidden shine-effect">
+          <img
+            src={tour.img}
+            alt={tour.name}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+        </div>
+
+        {/* Content Section */}
+        <div className="px-3 py-4">
+          {/* Tour Name */}
+          <h4 className="text-xl font-bold tracking-tight text-zinc-900 mb-2 group-hover:text-yellow-700 transition-colors duration-300">
+            {tour.name}
+          </h4>
+
+          {/* Location A → B */}
+          <div className="flex items-center gap-2 text-sm text-zinc-600 mb-3">
+            <MapPin size={16} className="text-yellow-600" />
+            <span>
+              {tour.start} → {tour.end}
+            </span>
+          </div>
+
+          {/* Days & Nights */}
+          <div className="flex items-center gap-2 mb-4">
+            <span className="bg-yellow-100 text-yellow-700 text-xs font-semibold px-2.5 py-1 rounded-full border border-yellow-300">
+              {tour.days} Days
+            </span>
+            <span className="bg-zinc-100 text-zinc-600 text-xs font-semibold px-2.5 py-1 rounded-full border border-zinc-200">
+              {tour.nights} Nights
+            </span>
+          </div>
+
+          {/* Golden Divider */}
+          <div className="w-12 h-0.5 bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-400 mb-4 rounded-full" />
+
+          {/* Actions */}
+          <div className="flex flex-col sm:flex-row gap-3 mt-4">
+            <button className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-700 to-yellow-500 text-white py-3 rounded-lg font-medium shadow hover:from-yellow-600 hover:to-yellow-400 hover:shadow-lg transition-all duration-300">
+              <Phone size={16} /> Call
+            </button>
+            <Link
+              to={`/popular-tours/${tour.category}/${tour.id}`} // 🔹 Updated route
+              className="flex-1 flex items-center justify-center gap-2 border border-zinc-300 text-zinc-700 py-3 rounded-lg font-medium hover:border-yellow-600 hover:text-yellow-700 hover:shadow-md transition-all duration-300"
+            >
+              <Eye size={16} /> Details
+            </Link>
+          </div>
+        </div>
+      </motion.div>
+    </SwiperSlide>
+  );
+
+  return (
+    <section className="bg-gradient-to-b from-zinc-50 via-white to-zinc-100 text-zinc-900 py-18 px-6 sm:px-10 lg:px-20 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        {/* North East Tours */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+          variants={containerVariants}
+        >
+          <motion.h3
+            variants={itemVariants}
+            className="text-3xl md:text-4xl font-bold font-serif text-zinc-800 mb-4 border-l-4 border-amber-600 pl-4"
+          >
+            North East
+          </motion.h3>
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            spaceBetween={30}
+            slidesPerView={1}
+            loop
+            autoplay={{ delay: 3500, disableOnInteraction: false }}
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 24 },
+              1024: { slidesPerView: 3, spaceBetween: 32 },
+              1280: { slidesPerView: 4, spaceBetween: 16 },
+            }}
+            className="tour-swiper"
+          >
+            {tours.northeast.map(renderTourCard)}
+          </Swiper>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default PopularTours2;

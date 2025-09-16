@@ -1,0 +1,319 @@
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import { motion } from "framer-motion";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Phone, Eye } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const tours = {
+  odisha: [
+    {
+      id: "puri-konark",
+      name: "Puri & Konark Tour",
+      duration: "3 Days / 2 Nights",
+      img: "https://source.unsplash.com/600x400/?puri,india",
+    },
+    {
+      id: "bhubaneswar-city",
+      name: "Bhubaneswar City Tour",
+      duration: "2 Days / 1 Night",
+      img: "https://source.unsplash.com/600x400/?temple,india",
+    },
+    {
+      id: "chilika-lake",
+      name: "Chilika Lake Tour",
+      duration: "2 Days / 1 Night",
+      img: "https://source.unsplash.com/600x400/?lake,india",
+    },
+    {
+      id: "simlipal",
+      name: "Simlipal National Park",
+      duration: "3 Days / 2 Nights",
+      img: "https://source.unsplash.com/600x400/?forest,india",
+    },
+    {
+      id: "konark-sun-temple",
+      name: "Konark Sun Temple",
+      duration: "1 Day",
+      img: "https://source.unsplash.com/600x400/?sun-temple,odisha",
+    },
+    {
+      id: "satkosia-tiger-reserve",
+      name: "Satkosia Tiger Reserve",
+      duration: "3 Days / 2 Nights",
+      img: "https://source.unsplash.com/600x400/?tiger,odisha",
+    },
+  ],
+  northeast: [
+    {
+      id: "meghalaya",
+      name: "Meghalaya Tour",
+      duration: "5 Days / 4 Nights",
+      img: "https://source.unsplash.com/600x400/?meghalaya,india",
+    },
+    {
+      id: "assam-safari",
+      name: "Assam Wildlife Safari",
+      duration: "4 Days / 3 Nights",
+      img: "https://source.unsplash.com/600x400/?assam,india",
+    },
+    {
+      id: "sikkim-adventure",
+      name: "Sikkim Adventure",
+      duration: "6 Days / 5 Nights",
+      img: "https://source.unsplash.com/600x400/?sikkim,india",
+    },
+    {
+      id: "arunachal",
+      name: "Arunachal Pradesh Tour",
+      duration: "7 Days / 6 Nights",
+      img: "https://source.unsplash.com/600x400/?mountains,india",
+    },
+    {
+      id: "nagaland-culture",
+      name: "Nagaland Cultural Tour",
+      duration: "5 Days / 4 Nights",
+      img: "https://source.unsplash.com/600x400/?nagaland,india",
+    },
+    {
+      id: "tripura-gems",
+      name: "Tripura's Hidden Gems",
+      duration: "4 Days / 3 Nights",
+      img: "https://source.unsplash.com/600x400/?tripura,india",
+    },
+  ],
+};
+
+const PopularTours = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
+  return (
+    <section className="bg-white text-zinc-900 py-24 px-6 sm:px-10 lg:px-20 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={containerVariants}
+          className="text-center mb-16"
+        >
+          <motion.h2
+            variants={itemVariants}
+            className="text-4xl md:text-6xl font-extrabold text-amber-600 tracking-tight leading-tight drop-shadow-sm"
+          >
+            Popular Tours
+          </motion.h2>
+          <motion.p
+            variants={itemVariants}
+            className="mt-4 text-lg text-zinc-600 font-light max-w-2xl mx-auto"
+          >
+            Explore our curated selection of the most sought-after travel packages.
+          </motion.p>
+          <motion.div
+            variants={itemVariants}
+            className="h-1.5 w-24 bg-gradient-to-r from-amber-600 to-amber-900 mx-auto mt-6 rounded-full"
+          ></motion.div>
+        </motion.div>
+
+        {/* Odisha Tours */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={containerVariants}
+          className="mb-20"
+        >
+          <motion.h3
+            variants={itemVariants}
+            className="text-2xl md:text-3xl font-bold text-zinc-800 mb-8"
+          >
+            Odisha
+          </motion.h3>
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            spaceBetween={24}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            navigation
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 24 },
+              1024: { slidesPerView: 4, spaceBetween: 32 },
+            }}
+            className="tour-swiper"
+          >
+            {tours.odisha.map((tour) => (
+              <SwiperSlide key={tour.id}>
+                <motion.div
+                  variants={itemVariants}
+                  className="group rounded-3xl bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl"
+                >
+                  <div className="relative overflow-hidden w-full h-64">
+                    <img
+                      src={tour.img}
+                      alt={tour.name}
+                      className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                  <div className="p-6 flex flex-col justify-between">
+                    <div>
+                      <h4 className="text-xl font-bold text-zinc-900 mb-1">
+                        {tour.name}
+                      </h4>
+                      <p className="text-sm text-zinc-500 font-medium">
+                        {tour.duration}
+                      </p>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-3 mt-6">
+                      <button className="flex-1 flex items-center justify-center gap-2 bg-zinc-800 text-white py-3 rounded-full hover:bg-zinc-700 transition-colors duration-300">
+                        <Phone size={16} /> Call
+                      </button>
+                      <Link
+                        to={`/tour/${tour.id}`}
+                        className="flex-1 flex items-center justify-center gap-2 border border-amber-600 text-amber-600 py-3 rounded-full hover:bg-amber-600 hover:text-white transition-colors duration-300"
+                      >
+                        <Eye size={16} /> Details
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </motion.div>
+
+        {/* North East Tours */}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          variants={containerVariants}
+        >
+          <motion.h3
+            variants={itemVariants}
+            className="text-2xl md:text-3xl font-bold text-zinc-800 mb-8"
+          >
+            North East
+          </motion.h3>
+          <Swiper
+            modules={[Autoplay, Navigation]}
+            spaceBetween={24}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            navigation
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 24 },
+              1024: { slidesPerView: 4, spaceBetween: 32 },
+            }}
+            className="tour-swiper"
+          >
+            {tours.northeast.map((tour) => (
+              <SwiperSlide key={tour.id}>
+                <motion.div
+                  variants={itemVariants}
+                  className="group rounded-3xl bg-white shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl"
+                >
+                  <div className="relative overflow-hidden w-full h-64">
+                    <img
+                      src={tour.img}
+                      alt={tour.name}
+                      className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                  <div className="p-6 flex flex-col justify-between">
+                    <div>
+                      <h4 className="text-xl font-bold text-zinc-900 mb-1">
+                        {tour.name}
+                      </h4>
+                      <p className="text-sm text-zinc-500 font-medium">
+                        {tour.duration}
+                      </p>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-3 mt-6">
+                      <button className="flex-1 flex items-center justify-center gap-2 bg-zinc-800 text-white py-3 rounded-full hover:bg-zinc-700 transition-colors duration-300">
+                        <Phone size={16} /> Call
+                      </button>
+                      <Link
+                        to={`/tour/${tour.id}`}
+                        className="flex-1 flex items-center justify-center gap-2 border border-amber-600 text-amber-600 py-3 rounded-full hover:bg-amber-600 hover:text-white transition-colors duration-300"
+                      >
+                        <Eye size={16} /> Details
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default PopularTours;
+
+
+
+
+
+card design
+
+<SwiperSlide key={tour.id}>
+      <motion.div
+        variants={itemVariants}
+        className="my-4 group relative rounded-3xl overflow-hidden shadow-xl bg-gradient-to-br from-white/70 to-white/30 backdrop-blur-lg border border-white/40 transform transition-all duration-500 hover:shadow-amber-600/30"
+      >
+        {/* Image */}
+        <div className="relative h-72 w-full overflow-hidden">
+          <img
+            src={tour.img}
+            alt={tour.name}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+          {/* Duration badge */}
+          <span className="absolute top-4 left-4 bg-amber-600/90 text-white text-xs font-medium px-4 py-1.5 rounded-full shadow-md backdrop-blur-md">
+            {tour.duration}
+          </span>
+        </div>
+
+        {/* Content */}
+        <div className="p-6 flex flex-col justify-between">
+          <h4 className="text-xl font-serif font-semibold text-zinc-900 mb-2 group-hover:text-amber-700 transition-colors duration-300">
+            {tour.name}
+          </h4>
+
+          <div className="flex flex-col sm:flex-row gap-3 mt-6">
+            <button className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-zinc-900 to-zinc-700 text-white py-3 rounded-full shadow-lg hover:shadow-xl hover:from-zinc-800 hover:to-zinc-600 transition-all duration-300">
+              <Phone size={16} /> Call
+            </button>
+            <Link
+              to={`/tour/${tour.id}`}
+              className="flex-1 flex items-center justify-center gap-2 border border-amber-600 text-amber-600 py-3 rounded-full font-medium hover:bg-amber-600 hover:text-white shadow-sm hover:shadow-lg transition-all duration-300"
+            >
+              <Eye size={16} /> Details
+            </Link>
+          </div>
+        </div>
+      </motion.div>
+    </SwiperSlide>
