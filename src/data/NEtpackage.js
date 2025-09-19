@@ -32,7 +32,7 @@ export const toursData = {
           name: "5 Nights 6 Days Gangtok, Lachen & Lachung Tour",
           description:
             "A complete Sikkim adventure covering Gangtok, Lachen, and Lachung with excursions to Gurudongmar Lake, Yumthang Valley, and scenic Himalayan landscapes.",
-          location: "Gangtok → Lachen → Lachung",
+          location: "Gangtok → Lachung",
           members: "6-10 people",
           image: "https://serenesikkim.com/wp-content/uploads/2025/06/image-10.jpg",
         },
@@ -119,27 +119,27 @@ export const toursData = {
           name: "6 Nights 7 Days Darjeeling, Gangtok & Lachen Tour",
           description:
             "Experience the charm of Darjeeling and Gangtok with an adventurous trip to Lachen, visiting Gurudongmar Lake and Himalayan valleys.",
-          location: "Darjeeling → Gangtok → Lachen",
+          location: "Darjeeling → Lachen",
           members: "10-14 people",
-          image: "https://source.unsplash.com/600x400/?lachen",
+          image: "https://thumbs.dreamstime.com/b/aerial-view-gangtok-city-image-beautiful-sikkim-india-rope-way-one-beautiful-well-managed-north-east-33819494.jpg",
         },
         {
           id: "pkg4",
           name: "7 Nights 8 Days Darjeeling, Gangtok, Lachen & Lachung Tour",
           description:
             "A complete Himalayan tour covering Darjeeling and Gangtok along with Lachen and Lachung, featuring Gurudongmar Lake and Yumthang Valley.",
-          location: "Darjeeling → Gangtok → Lachen → Lachung",
+          location: "Darjeeling → Lachung",
           members: "10-14 people",
-          image: "https://source.unsplash.com/600x400/?lachung",
+          image: "https://media.istockphoto.com/id/508546723/photo/tsomgo-lake.jpg?s=612x612&w=0&k=20&c=_FyIQE3KLopBsmJUscvdA0XsZXjJ2V_aBDRlKRMMgig=",
         },
         {
           id: "pkg5",
           name: "9 Nights 10 Days Darjeeling, Gangtok, Lachen, Lachung, Pelling Tour",
           description:
             "Extended North Sikkim tour with Darjeeling, Gangtok, Lachen, and Lachung, plus a visit to Pelling’s monasteries, lakes, and mountain viewpoints.",
-          location: "Darjeeling → Gangtok → Lachen → Lachung → Pelling",
+          location: "Darjeeling → Pelling",
           members: "10-14 people",
-          image: "https://source.unsplash.com/600x400/?pelling",
+          image: "https://images.unsplash.com/photo-1615874226138-b37fcf3d75b2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRzb21nbyUyMGxha2V8ZW58MHx8MHx8fDA%3D",
         },
         {
           id: "pkg6",
@@ -147,9 +147,9 @@ export const toursData = {
           description:
             "The ultimate combo covering Darjeeling, Gangtok, North Sikkim (Lachen & Lachung), Pelling, and Namchi with iconic monasteries and panoramic views.",
           location:
-            "Darjeeling → Gangtok → Lachen → Lachung → Pelling → Namchi",
+            "Darjeeling → Namchi",
           members: "10-14 people",
-          image: "https://source.unsplash.com/600x400/?namchi",
+          image: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Tsomgo_Lake%2C_Sikkim.jpg",
         },
       ],
     },
@@ -161,25 +161,25 @@ export const toursData = {
       nights: 6,
       start: "Guwahati",
       end: "Tawang",
-      img: "https://source.unsplash.com/600x400/?arunachal,india",
+      img: "https://media.istockphoto.com/id/910430170/photo/tawang-arunachal-pradesh.jpg?s=612x612&w=0&k=20&c=MKKYsHH_6JRMYROO2bHIsQAW9XoSnl-9nkRGOFgAg0M=",
       packages: [
         {
           id: "pkg1",
           name: "5 Nights 6 Days Tawang & Bomdila Tour",
           description:
             "Scenic road trip through Dirang, Bomdila, and Tawang with monastery visits, waterfalls, and mountain views.",
-          location: "Guwahati → Bomdila → Tawang",
+          location: "Guwahati → Tawang",
           members: "12-18 people",
-          image: "https://source.unsplash.com/600x400/?tawang",
+          image: "https://media.istockphoto.com/id/484711920/photo/tawang-monastery-arunachal-pradesh.jpg?s=612x612&w=0&k=20&c=s0ic_pkK28PnX02apET6tprFiY3vvECUPKre7Gjjt5U=",
         },
         {
           id: "pkg2",
           name: "6 Nights 7 Days Tawang, Dirang & Bomdila Tour",
           description:
             "A blend of nature and culture with visits to Sela Pass, Jaswant Garh, Dirang hot springs, and Tawang Monastery.",
-          location: "Guwahati → Dirang → Bomdila → Tawang",
+          location: "Guwahati → Tawang",
           members: "10-14 people",
-          image: "https://source.unsplash.com/600x400/?bomdila",
+          image: "https://media.istockphoto.com/id/1165696115/photo/tawang.jpg?s=612x612&w=0&k=20&c=m3fN2T_6m10bKN48lfH2gWq_tgyXeV5K9QacR30CZ7I=",
         },
       ],
     },

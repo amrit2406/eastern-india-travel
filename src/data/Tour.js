@@ -10,7 +10,7 @@ export const tours = [
     groupSize: "Max 12",
     rating: "4.8",
     image:
-      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=700&q=80",
+      "https://media.istockphoto.com/id/470248962/photo/tea-plantations-sunset.jpg?s=612x612&w=0&k=20&c=xo98EQ7-n4_nKqvzy4204GErBr4W_iRplcTqzyhj_K0=",
   },
   {
     id: "kolkata",
@@ -22,7 +22,7 @@ export const tours = [
     groupSize: "Max 10",
     rating: "4.9",
     image:
-      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=700&q=80",
+      "https://t3.ftcdn.net/jpg/00/79/37/88/360_F_79378891_k4Lq0nFbWdC4AICYoPOWYzhGI7YwgMvG.jpg",
   },
   {
     id: "up",
@@ -34,7 +34,7 @@ export const tours = [
     groupSize: "Max 15",
     rating: "4.7",
     image:
-      "https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=700&q=80",
+      "https://plus.unsplash.com/premium_photo-1661902184762-49c2c8ebb787?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXR0YXIlMjBwcmFkZXNofGVufDB8fDB8fHww",
   },
   {
     id: "vizag",
@@ -46,6 +46,6 @@ export const tours = [
     groupSize: "Max 8",
     rating: "5.0",
     image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=700&q=80",
+      "https://images.unsplash.com/photo-1609854534028-b512f5246abc?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmlzYWtoYXBhdG5hbXxlbnwwfHwwfHx8MA%3D%3D",
   },
 ];

@@ -84,10 +84,10 @@ export default function TourPackage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-3xl text-center md:text-5xl font-bold text-white mb-4">
               {tour.name}
             </h1>
-            <div className="flex flex-wrap items-center gap-4 text-white">
+            {/* <div className="flex flex-wrap items-center gap-4 text-white">
               <div className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-yellow-500" />
                 <span>
@@ -109,7 +109,7 @@ export default function TourPackage() {
                 <FaStar className="text-yellow-500" />
                 <span>4.8/5</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

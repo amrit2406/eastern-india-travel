@@ -11,7 +11,7 @@ export const toursData = {
           description: "Comfort stays, standard meals, shared transport.",
           days: 5,
           nights: 4,
-          banner: "https://source.unsplash.com/1600x900/?meghalaya,waterfall",
+          banner: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww",
           intro:
             "Embark on a 4 Nights 5 Days Gangtok & Lachen Tour designed for travelers who want to experience the serene charm of Sikkim’s capital and its pristine northern landscapes. This itinerary blends bustling MG Marg and monasteries of Gangtok with the peaceful alpine villages of Lachen. Witness snow-clad peaks, alpine lakes, cascading waterfalls, and unspoiled valleys. Enjoy a scenic drive through curving mountain roads, visit revered Buddhist monasteries, and interact with friendly locals. Perfect for couples, families, and adventure enthusiasts, this journey covers iconic destinations such as Tashi Viewpoint, Rumtek Monastery, Gurudongmar Lake, and Lachen’s scenic surroundings. With crisp mountain air, stunning panoramas, and rich culture, the Gangtok & Lachen Tour guarantees an unforgettable Himalayan escape.",
           shortItinerary: [
@@ -22,10 +22,15 @@ export const toursData = {
             "Day 5: Gangtok Departure",
           ],
           expect: [
-            "Comfortable stays with local experiences",
-            "Expert local guides & private transport",
-            "Easy-moderate walking and viewpoint visits",
-            "Authentic tribal food tastings",
+            "Transport and accommodation is already organized",
+            "Local and knowledgeable guides",
+            "The Natural Paradise",
+            "Easy to Plan and Book",
+            "Great Gift and Safety",
+            "The Best in Hospitality",
+            "Land of Peace & Spirituality",
+            "Tour the Incredible Wildlife",
+            "Value for Money",
           ],
           itinerary: [
             {
@@ -55,11 +60,10 @@ export const toursData = {
             },
           ],
           gallery: [
-            "https://source.unsplash.com/800x600/?shillong",
-            "https://source.unsplash.com/800x600/?cherrapunji",
-            "https://source.unsplash.com/800x600/?dawki",
-            "https://source.unsplash.com/800x600/?meghalaya",
-            "https://source.unsplash.com/800x600/?mawlynnong",
+            "https://t3.ftcdn.net/jpg/04/64/08/62/360_F_464086266_JkXQZb3mMlrmEUGuArHALuX5iRN2wMmJ.jpg",
+            "https://t4.ftcdn.net/jpg/04/16/47/89/360_F_416478921_IgcnUmprlQqGjfrnZ0dPBu1rlWhCBHgK.jpg",
+            "https://jetsettersush.com/wp-content/uploads/2025/06/lachung-sikkim.jpg",
+            "https://serenesikkim.com/wp-content/uploads/2025/06/image-10.jpg",
           ],
           start: "Shillong",
           end: "Guwahati",
@@ -115,11 +119,10 @@ export const toursData = {
             },
           ],
           gallery: [
-            "https://source.unsplash.com/800x600/?shillong,luxury",
-            "https://source.unsplash.com/800x600/?cherrapunji,luxury",
-            "https://source.unsplash.com/800x600/?dawki,luxury",
-            "https://source.unsplash.com/800x600/?meghalaya,luxury",
-            "https://source.unsplash.com/800x600/?mawlynnong,luxury",
+            "https://t3.ftcdn.net/jpg/04/64/08/62/360_F_464086266_JkXQZb3mMlrmEUGuArHALuX5iRN2wMmJ.jpg",
+            "https://t4.ftcdn.net/jpg/04/16/47/89/360_F_416478921_IgcnUmprlQqGjfrnZ0dPBu1rlWhCBHgK.jpg",
+            "https://jetsettersush.com/wp-content/uploads/2025/06/lachung-sikkim.jpg",
+            "https://serenesikkim.com/wp-content/uploads/2025/06/image-10.jpg",
           ],
           start: "Shillong",
           end: "Guwahati",
@@ -131,7 +134,7 @@ export const toursData = {
           description: "Premium stays, private transport & experiences.",
           days: 6,
           nights: 5,
-          banner: "https://source.unsplash.com/1600x900/?meghalaya,waterfall",
+          banner: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww",
           intro:
             "Discover the best of Sikkim with this immersive 5 Nights 6 Days Gangtok, Lachen & Lachung Tour. Perfect for adventure seekers and nature lovers, this itinerary covers the vibrant cityscapes of Gangtok, the alpine serenity of Lachen, and the floral meadows of Lachung. Highlights include Rumtek Monastery, Tashi Viewpoint, Gurudongmar Lake, and Yumthang Valley. Journey through winding mountain roads, past waterfalls, rivers, and prayer flags fluttering against snow-capped peaks. This tour offers a perfect mix of cultural encounters, scenic drives, and serene stays in mountain villages. Whether you’re photographing the Himalayas or seeking spiritual solace, this package ensures a truly unforgettable Sikkim experience.",
           shortItinerary: [
@@ -143,10 +146,15 @@ export const toursData = {
             "Day 6: Gangtok Departure",
           ],
           expect: [
-            "Luxury stays with premium local experiences",
-            "Private expert guides & exclusive transport",
-            "Customized walking tours and private viewpoints",
-            "Gourmet tribal food tastings",
+            "Transport and accommodation is already organized",
+            "Local and knowledgeable guides",
+            "The Natural Paradise",
+            "Easy to Plan and Book",
+            "Great Gift and Safety",
+            "The Best in Hospitality",
+            "Land of Peace & Spirituality",
+            "Tour the Incredible Wildlife",
+            "Value for Money",
           ],
           itinerary: [
             {
@@ -181,11 +189,10 @@ export const toursData = {
             },
           ],
           gallery: [
-            "https://source.unsplash.com/800x600/?shillong,luxury",
-            "https://source.unsplash.com/800x600/?cherrapunji,luxury",
-            "https://source.unsplash.com/800x600/?dawki,luxury",
-            "https://source.unsplash.com/800x600/?meghalaya,luxury",
-            "https://source.unsplash.com/800x600/?mawlynnong,luxury",
+            "https://t3.ftcdn.net/jpg/04/64/08/62/360_F_464086266_JkXQZb3mMlrmEUGuArHALuX5iRN2wMmJ.jpg",
+            "https://t4.ftcdn.net/jpg/04/16/47/89/360_F_416478921_IgcnUmprlQqGjfrnZ0dPBu1rlWhCBHgK.jpg",
+            "https://jetsettersush.com/wp-content/uploads/2025/06/lachung-sikkim.jpg",
+            "https://serenesikkim.com/wp-content/uploads/2025/06/image-10.jpg",
           ],
           start: "Shillong",
           end: "Guwahati",
@@ -203,7 +210,7 @@ export const toursData = {
           description: "Two safaris + stay.",
           days: 4,
           nights: 3,
-          banner: "https://source.unsplash.com/1600x900/?kaziranga,elephant",
+          banner: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww",
           intro:
             "Experience the romance and charm of the Himalayas with this 2 Nights 3 Days Darjeeling Honeymoon Special Tour. Nestled amidst the rolling hills and lush tea gardens, Darjeeling offers breathtaking views of the mighty Kanchenjunga, serene walks through fragrant gardens, and unforgettable moments in cozy settings. Perfect for couples, this tour blends scenic beauty, adventure, and relaxation, making it an ideal honeymoon getaway in the Queen of Hills.",
           shortItinerary: [
@@ -212,9 +219,15 @@ export const toursData = {
             "Day 3: Departure from Darjeeling",
           ],
           expect: [
-            "Multiple jeep/elephant safaris (park entry included)",
-            "Comfortable lodge stays near the park",
-            "Local Assamese cuisine & cultural visits",
+            "Transport and accommodation is already organized",
+            "Local and knowledgeable guides",
+            "The Natural Paradise",
+            "Easy to Plan and Book",
+            "Great Gift and Safety",
+            "The Best in Hospitality",
+            "Land of Peace & Spirituality",
+            "Tour the Incredible Wildlife",
+            "Value for Money",
           ],
           itinerary: [
             {
@@ -234,9 +247,11 @@ export const toursData = {
             },
           ],
           gallery: [
-            "https://source.unsplash.com/800x600/?kaziranga",
-            "https://source.unsplash.com/800x600/?assam,tea",
-            "https://source.unsplash.com/800x600/?elephant",
+            "https://t3.ftcdn.net/jpg/00/81/75/84/360_F_81758472_fmLJL272qsoZ7n4oeHXccw5BU8q0aNZ6.jpg",
+            "https://images.unsplash.com/photo-1622308644420-b20142dc993c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyamVlbGluZ3xlbnwwfHwwfHx8MA%3D%3D",
+            "https://media.istockphoto.com/id/620960858/photo/tsangmo-lake-in-sikkim-india.jpg?s=612x612&w=0&k=20&c=Bf4-bpzmHi3-5gq11pmIMBsVCKHufF3hZZr0KCLIfqo=",
+            "https://thumbs.dreamstime.com/b/beautiful-lake-mirik-which-darjeeling-district-also-tourist-place-people-came-far-places-basically-hill-side-area-169659176.jpg",
+            "https://plus.unsplash.com/premium_photo-1697730418140-064a5b6c2e17?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2FuZ3Rva3xlbnwwfHwwfHx8MA%3D%3D",
           ],
           start: "Guwahati",
           end: "Guwahati",
@@ -248,7 +263,7 @@ export const toursData = {
           description: "Two safaris + stay.",
           days: 4,
           nights: 3,
-          banner: "https://source.unsplash.com/1600x900/?kaziranga,elephant",
+          banner: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww",
           intro:
             "Celebrate love amidst the serene beauty of the Himalayas with this 2 Nights 3 Days Gangtok Honeymoon Special Tour. Set against the backdrop of lush green hills and panoramic views of Mt. Kanchenjunga, Gangtok offers a perfect blend of romance, culture, and nature. Enjoy picturesque landscapes, peaceful walks, vibrant local markets, and optional romantic experiences like candlelight dinners and bed decorations, making it an ideal getaway for couples.",
           shortItinerary: [
@@ -257,9 +272,15 @@ export const toursData = {
             "Day 3: Gangtok – Bagdogra / New Jalpaiguri Departure (Approx. 4 Hours’ Drive)",
           ],
           expect: [
-            "Multiple jeep/elephant safaris (park entry included)",
-            "Comfortable lodge stays near the park",
-            "Local Assamese cuisine & cultural visits",
+            "Transport and accommodation is already organized",
+            "Local and knowledgeable guides",
+            "The Natural Paradise",
+            "Easy to Plan and Book",
+            "Great Gift and Safety",
+            "The Best in Hospitality",
+            "Land of Peace & Spirituality",
+            "Tour the Incredible Wildlife",
+            "Value for Money",
           ],
           itinerary: [
             {
@@ -293,7 +314,7 @@ export const toursData = {
           description: "Two safaris + stay.",
           days: 4,
           nights: 3,
-          banner: "https://source.unsplash.com/1600x900/?kaziranga,elephant",
+          banner: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww",
           intro:
             "Celebrate love amidst the serene beauty of the Himalayas with this 3 Nights 4 Days Darjeeling with Mirik Honeymoon Special Tour. Perfect for couples, this tour combines scenic landscapes, romantic experiences, and cultural exploration. Enjoy breathtaking views of Mt. Kanchenjunga, stroll through lush tea gardens, visit sparkling lakes, and explore charming local markets. Optional romantic touches like candlelight dinners and bed decorations make this a truly memorable honeymoon getaway in the Queen of Hills.",
           shortItinerary: [
@@ -303,9 +324,15 @@ export const toursData = {
             "Day 4: Departure from Darjeeling – Transfer to Bagdogra / New Jalpaiguri",
           ],
           expect: [
-            "Multiple jeep/elephant safaris (park entry included)",
-            "Comfortable lodge stays near the park",
-            "Local Assamese cuisine & cultural visits",
+            "Transport and accommodation is already organized",
+            "Local and knowledgeable guides",
+            "The Natural Paradise",
+            "Easy to Plan and Book",
+            "Great Gift and Safety",
+            "The Best in Hospitality",
+            "Land of Peace & Spirituality",
+            "Tour the Incredible Wildlife",
+            "Value for Money",
           ],
           itinerary: [
             {
@@ -344,7 +371,7 @@ export const toursData = {
           description: "Two safaris + stay.",
           days: 4,
           nights: 3,
-          banner: "https://source.unsplash.com/1600x900/?kaziranga,elephant",
+          banner: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww",
           intro:
             "Celebrate romance amidst the breathtaking Himalayan landscapes with this 4 Nights 5 Days Darjeeling & Gangtok Honeymoon Special Tour. Perfect for couples, this tour combines scenic beauty, cultural experiences, and memorable moments. Explore the charming streets of Darjeeling, enjoy panoramic views of Mt. Kanchenjunga from Tiger Hill, stroll through lush tea gardens, and visit serene lakes. Continue your journey to Gangtok to experience glacial lakes, sacred temples, and Himalayan vistas. Optional romantic touches like candlelight dinners and bed decorations add a special charm to your honeymoon.",
           shortItinerary: [
@@ -355,9 +382,15 @@ export const toursData = {
             "Day 5: Gangtok – Tsomgo Lake & Baba Harbhajan Mandir – Departure",
           ],
           expect: [
-            "Multiple jeep/elephant safaris (park entry included)",
-            "Comfortable lodge stays near the park",
-            "Local Assamese cuisine & cultural visits",
+            "Transport and accommodation is already organized",
+            "Local and knowledgeable guides",
+            "The Natural Paradise",
+            "Easy to Plan and Book",
+            "Great Gift and Safety",
+            "The Best in Hospitality",
+            "Land of Peace & Spirituality",
+            "Tour the Incredible Wildlife",
+            "Value for Money",
           ],
           itinerary: [
             {
@@ -407,7 +440,7 @@ export const toursData = {
           description: "Two safaris + stay.",
           days: 5,
           nights: 4,
-          banner: "https://source.unsplash.com/1600x900/?kaziranga,elephant",
+          banner: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww",
           intro:
             "Experience the mesmerizing charm of Darjeeling and Gangtok on this 4 Nights 5 Days Himalayan tour. Nestled amidst the majestic peaks of the Eastern Himalayas, these hill stations are renowned for their scenic beauty, sprawling tea gardens, vibrant local markets, colonial architecture, and rich cultural heritage. Witness panoramic views of the snow-capped Mount Kanchenjunga, explore ancient monasteries, and stroll through bustling bazaars filled with handicrafts and local delicacies. Enjoy serene lakes, toy train rides, and peaceful Himalayan trails, ideal for photography and nature enthusiasts. This tour perfectly blends sightseeing, leisure, and adventure, making it ideal for families, couples, and solo travelers alike. Immerse yourself in the spiritual ambiance of monasteries, capture the breathtaking sunrise at Tiger Hill, and savor the flavors of authentic Himalayan cuisine. Create unforgettable memories as you explore two of India’s most iconic hill destinations.",
           shortItinerary: [
@@ -418,9 +451,15 @@ export const toursData = {
             "Day 5: Departure from Gangtok – Transfer to Bagdogra / NJP",
           ],
           expect: [
-            "Multiple jeep/elephant safaris (park entry included)",
-            "Comfortable lodge stays near the park",
-            "Local Assamese cuisine & cultural visits",
+            "Transport and accommodation is already organized",
+            "Local and knowledgeable guides",
+            "The Natural Paradise",
+            "Easy to Plan and Book",
+            "Great Gift and Safety",
+            "The Best in Hospitality",
+            "Land of Peace & Spirituality",
+            "Tour the Incredible Wildlife",
+            "Value for Money",
           ],
           itinerary: [
             {
@@ -450,9 +489,13 @@ export const toursData = {
             },
           ],
           gallery: [
-            "https://source.unsplash.com/800x600/?kaziranga",
-            "https://source.unsplash.com/800x600/?assam,tea",
-            "https://source.unsplash.com/800x600/?elephant",
+            "https://media.istockphoto.com/id/1323555810/photo/morning-sunrise-view.jpg?s=612x612&w=0&k=20&c=bQgY62S2xnaK9ME344q2JIY4vJoCUfWBeVEi9WNozDM=",
+            "https://t3.ftcdn.net/jpg/04/64/08/62/360_F_464086266_JkXQZb3mMlrmEUGuArHALuX5iRN2wMmJ.jpg",
+            "https://media.istockphoto.com/id/606223864/photo/view-of-gangtok-the-capital-city-of-sikkim-india.jpg?s=612x612&w=0&k=20&c=UEKddFCWZcHG-x9ru-Lles8FiPv1wMTviTD4QeFlBo4=",
+            "https://thumbs.dreamstime.com/b/aerial-view-gangtok-city-image-beautiful-sikkim-india-rope-way-one-beautiful-well-managed-north-east-33819494.jpg",
+            "https://media.istockphoto.com/id/508546723/photo/tsomgo-lake.jpg?s=612x612&w=0&k=20&c=_FyIQE3KLopBsmJUscvdA0XsZXjJ2V_aBDRlKRMMgig=",
+            "https://images.unsplash.com/photo-1615874226138-b37fcf3d75b2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRzb21nbyUyMGxha2V8ZW58MHx8MHx8fDA%3D",
+            "https://upload.wikimedia.org/wikipedia/commons/f/f2/Tsomgo_Lake%2C_Sikkim.jpg",
           ],
           start: "Guwahati",
           end: "Guwahati",
@@ -464,7 +507,7 @@ export const toursData = {
           description: "Two safaris + stay.",
           days: 5,
           nights: 4,
-          banner: "https://source.unsplash.com/1600x900/?kaziranga,elephant",
+          banner: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww",
           intro:
             "Explore the majestic landscapes and vibrant culture of Darjeeling and Gangtok on this 5 Nights 6 Days Himalayan tour. From snow-capped peaks to lush tea gardens, this tour highlights the best of the Eastern Himalayas. Witness spectacular sunrises at Tiger Hill, stroll through bustling Mall Road markets, and immerse yourself in the serene ambiance of ancient monasteries. Discover the charm of Gangtok with its spiritual monasteries, scenic viewpoints, and colorful local bazaars. Enjoy panoramic vistas of Mount Kanchenjunga, taste authentic Himalayan cuisine, and relax amidst tranquil lakes and gardens. Perfect for families, couples, and nature lovers, this itinerary balances sightseeing, leisure, and cultural exploration. Capture the beauty of Darjeeling’s rolling hills, experience Tibetan traditions, and create lasting memories on this unforgettable Himalayan journey.",
           shortItinerary: [
@@ -476,9 +519,15 @@ export const toursData = {
             "Day 6: Departure from Gangtok – Transfer to Bagdogra / NJP",
           ],
           expect: [
-            "Multiple jeep/elephant safaris (park entry included)",
-            "Comfortable lodge stays near the park",
-            "Local Assamese cuisine & cultural visits",
+            "Transport and accommodation is already organized",
+            "Local and knowledgeable guides",
+            "The Natural Paradise",
+            "Easy to Plan and Book",
+            "Great Gift and Safety",
+            "The Best in Hospitality",
+            "Land of Peace & Spirituality",
+            "Tour the Incredible Wildlife",
+            "Value for Money",
           ],
           itinerary: [
             {
@@ -513,9 +562,13 @@ export const toursData = {
             },
           ],
           gallery: [
-            "https://source.unsplash.com/800x600/?kaziranga",
-            "https://source.unsplash.com/800x600/?assam,tea",
-            "https://source.unsplash.com/800x600/?elephant",
+            "https://media.istockphoto.com/id/1323555810/photo/morning-sunrise-view.jpg?s=612x612&w=0&k=20&c=bQgY62S2xnaK9ME344q2JIY4vJoCUfWBeVEi9WNozDM=",
+            "https://t3.ftcdn.net/jpg/04/64/08/62/360_F_464086266_JkXQZb3mMlrmEUGuArHALuX5iRN2wMmJ.jpg",
+            "https://media.istockphoto.com/id/606223864/photo/view-of-gangtok-the-capital-city-of-sikkim-india.jpg?s=612x612&w=0&k=20&c=UEKddFCWZcHG-x9ru-Lles8FiPv1wMTviTD4QeFlBo4=",
+            "https://thumbs.dreamstime.com/b/aerial-view-gangtok-city-image-beautiful-sikkim-india-rope-way-one-beautiful-well-managed-north-east-33819494.jpg",
+            "https://media.istockphoto.com/id/508546723/photo/tsomgo-lake.jpg?s=612x612&w=0&k=20&c=_FyIQE3KLopBsmJUscvdA0XsZXjJ2V_aBDRlKRMMgig=",
+            "https://images.unsplash.com/photo-1615874226138-b37fcf3d75b2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRzb21nbyUyMGxha2V8ZW58MHx8MHx8fDA%3D",
+            "https://upload.wikimedia.org/wikipedia/commons/f/f2/Tsomgo_Lake%2C_Sikkim.jpg",
           ],
           start: "Guwahati",
           end: "Guwahati",
@@ -527,7 +580,7 @@ export const toursData = {
           description: "Two safaris + stay.",
           days: 5,
           nights: 4,
-          banner: "https://source.unsplash.com/1600x900/?kaziranga,elephant",
+          banner: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww",
           intro:
             "Embark on a mesmerizing journey through Darjeeling, Gangtok, and Lachen on this 6 Nights 7 Days tour. Experience the breathtaking Himalayan landscapes, lush tea gardens, snow-capped peaks, and vibrant local culture. Witness the sunrise at Tiger Hill, explore colonial charm, monasteries, and bustling local markets. Lachen introduces you to serene mountain villages, pristine lakes, and traditional Sikkimese lifestyles. Enjoy panoramic views of Mount Kanchenjunga, indulge in local cuisine, and immerse yourself in the spiritual and natural heritage of the Eastern Himalayas. Perfect for families, couples, and adventure seekers, this itinerary balances sightseeing, leisure, and cultural exploration. Capture the beauty of rolling hills, cascading waterfalls, and tranquil valleys while enjoying an unforgettable Himalayan adventure.",
           shortItinerary: [
@@ -540,9 +593,15 @@ export const toursData = {
             "Day 7: Lachen – Gangtok Departure – Transfer to Bagdogra / NJP",
           ],
           expect: [
-            "Multiple jeep/elephant safaris (park entry included)",
-            "Comfortable lodge stays near the park",
-            "Local Assamese cuisine & cultural visits",
+            "Transport and accommodation is already organized",
+            "Local and knowledgeable guides",
+            "The Natural Paradise",
+            "Easy to Plan and Book",
+            "Great Gift and Safety",
+            "The Best in Hospitality",
+            "Land of Peace & Spirituality",
+            "Tour the Incredible Wildlife",
+            "Value for Money",
           ],
           itinerary: [
             {
@@ -582,9 +641,13 @@ export const toursData = {
             },
           ],
           gallery: [
-            "https://source.unsplash.com/800x600/?kaziranga",
-            "https://source.unsplash.com/800x600/?assam,tea",
-            "https://source.unsplash.com/800x600/?elephant",
+            "https://media.istockphoto.com/id/1323555810/photo/morning-sunrise-view.jpg?s=612x612&w=0&k=20&c=bQgY62S2xnaK9ME344q2JIY4vJoCUfWBeVEi9WNozDM=",
+            "https://t3.ftcdn.net/jpg/04/64/08/62/360_F_464086266_JkXQZb3mMlrmEUGuArHALuX5iRN2wMmJ.jpg",
+            "https://media.istockphoto.com/id/606223864/photo/view-of-gangtok-the-capital-city-of-sikkim-india.jpg?s=612x612&w=0&k=20&c=UEKddFCWZcHG-x9ru-Lles8FiPv1wMTviTD4QeFlBo4=",
+            "https://thumbs.dreamstime.com/b/aerial-view-gangtok-city-image-beautiful-sikkim-india-rope-way-one-beautiful-well-managed-north-east-33819494.jpg",
+            "https://media.istockphoto.com/id/508546723/photo/tsomgo-lake.jpg?s=612x612&w=0&k=20&c=_FyIQE3KLopBsmJUscvdA0XsZXjJ2V_aBDRlKRMMgig=",
+            "https://images.unsplash.com/photo-1615874226138-b37fcf3d75b2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRzb21nbyUyMGxha2V8ZW58MHx8MHx8fDA%3D",
+            "https://upload.wikimedia.org/wikipedia/commons/f/f2/Tsomgo_Lake%2C_Sikkim.jpg",
           ],
           start: "Guwahati",
           end: "Guwahati",
@@ -596,7 +659,7 @@ export const toursData = {
           description: "Two safaris + stay.",
           days: 5,
           nights: 4,
-          banner: "https://source.unsplash.com/1600x900/?kaziranga,elephant",
+          banner: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww",
           intro:
             "Embark on a spectacular 7 Nights 8 Days journey through Darjeeling, Gangtok, Lachen, and Lachung, exploring the mesmerizing beauty of the Eastern Himalayas. Witness the stunning sunrise at Tiger Hill with panoramic views of Mount Kanchenjunga, stroll through lush tea gardens, and experience the colonial charm of Darjeeling. Explore the vibrant streets, monasteries, and local markets of Gangtok while soaking in Sikkimese culture and traditions. Lachen and Lachung villages offer serene Himalayan landscapes, glacial lakes, pristine rivers, and traditional Sikkimese hospitality. This tour is ideal for families, couples, and nature enthusiasts, combining adventure, leisure, and cultural exploration. Enjoy breathtaking vistas, cascading waterfalls, and tranquil valleys, while immersing yourself in local cuisine, heritage, and unforgettable mountain experiences. Every moment promises awe-inspiring memories, making this Himalayan journey truly once-in-a-lifetime.",
           shortItinerary: [
@@ -610,9 +673,15 @@ export const toursData = {
             "Day 8: Lachung – Gangtok Departure – Transfer to Bagdogra / NJP",
           ],
           expect: [
-            "Multiple jeep/elephant safaris (park entry included)",
-            "Comfortable lodge stays near the park",
-            "Local Assamese cuisine & cultural visits",
+            "Transport and accommodation is already organized",
+            "Local and knowledgeable guides",
+            "The Natural Paradise",
+            "Easy to Plan and Book",
+            "Great Gift and Safety",
+            "The Best in Hospitality",
+            "Land of Peace & Spirituality",
+            "Tour the Incredible Wildlife",
+            "Value for Money",
           ],
           itinerary: [
             {
@@ -657,9 +726,13 @@ export const toursData = {
             },
           ],
           gallery: [
-            "https://source.unsplash.com/800x600/?kaziranga",
-            "https://source.unsplash.com/800x600/?assam,tea",
-            "https://source.unsplash.com/800x600/?elephant",
+            "https://media.istockphoto.com/id/1323555810/photo/morning-sunrise-view.jpg?s=612x612&w=0&k=20&c=bQgY62S2xnaK9ME344q2JIY4vJoCUfWBeVEi9WNozDM=",
+            "https://t3.ftcdn.net/jpg/04/64/08/62/360_F_464086266_JkXQZb3mMlrmEUGuArHALuX5iRN2wMmJ.jpg",
+            "https://media.istockphoto.com/id/606223864/photo/view-of-gangtok-the-capital-city-of-sikkim-india.jpg?s=612x612&w=0&k=20&c=UEKddFCWZcHG-x9ru-Lles8FiPv1wMTviTD4QeFlBo4=",
+            "https://thumbs.dreamstime.com/b/aerial-view-gangtok-city-image-beautiful-sikkim-india-rope-way-one-beautiful-well-managed-north-east-33819494.jpg",
+            "https://media.istockphoto.com/id/508546723/photo/tsomgo-lake.jpg?s=612x612&w=0&k=20&c=_FyIQE3KLopBsmJUscvdA0XsZXjJ2V_aBDRlKRMMgig=",
+            "https://images.unsplash.com/photo-1615874226138-b37fcf3d75b2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRzb21nbyUyMGxha2V8ZW58MHx8MHx8fDA%3D",
+            "https://upload.wikimedia.org/wikipedia/commons/f/f2/Tsomgo_Lake%2C_Sikkim.jpg",
           ],
           start: "Guwahati",
           end: "Guwahati",
@@ -671,7 +744,7 @@ export const toursData = {
           description: "Two safaris + stay.",
           days: 5,
           nights: 4,
-          banner: "https://source.unsplash.com/1600x900/?kaziranga,elephant",
+          banner: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww",
           intro:
             "Embark on an unforgettable Himalayan journey with this 9 Nights 10 Days Darjeeling, Gangtok, Lachen, Lachung, and Pelling tour, designed for travelers seeking a perfect blend of adventure, culture, and natural beauty. Begin with the charming hill station of Darjeeling, famous for its lush tea gardens, colonial architecture, and mesmerizing sunrise at Tiger Hill overlooking Mount Kanchenjunga. Explore vibrant local markets, monasteries, and serene landscapes. Journey onward to Gangtok, the capital of Sikkim, visiting ancient monasteries, panoramic viewpoints, and MG Marg’s bustling streets. Experience the untouched beauty of Lachen and Lachung, including the stunning Gurudongmar Lake and Yumthang Valley. Conclude your tour with Pelling, renowned for Pemayangtse Monastery, Kanchenjunga Falls, and breathtaking vistas. Ideal for families, couples, and nature lovers, this itinerary balances sightseeing, leisure, and cultural immersion. Capture mesmerizing photographs, savor authentic local cuisine, and create lifelong memories amidst the majestic Eastern Himalayas.",
           shortItinerary: [
@@ -687,9 +760,15 @@ export const toursData = {
             "Day 10: Pelling Sightseeing & Departure",
           ],
           expect: [
-            "Multiple jeep/elephant safaris (park entry included)",
-            "Comfortable lodge stays near the park",
-            "Local Assamese cuisine & cultural visits",
+            "Transport and accommodation is already organized",
+            "Local and knowledgeable guides",
+            "The Natural Paradise",
+            "Easy to Plan and Book",
+            "Great Gift and Safety",
+            "The Best in Hospitality",
+            "Land of Peace & Spirituality",
+            "Tour the Incredible Wildlife",
+            "Value for Money",
           ],
           itinerary: [
             {
@@ -744,9 +823,13 @@ export const toursData = {
             },
           ],
           gallery: [
-            "https://source.unsplash.com/800x600/?kaziranga",
-            "https://source.unsplash.com/800x600/?assam,tea",
-            "https://source.unsplash.com/800x600/?elephant",
+            "https://media.istockphoto.com/id/1323555810/photo/morning-sunrise-view.jpg?s=612x612&w=0&k=20&c=bQgY62S2xnaK9ME344q2JIY4vJoCUfWBeVEi9WNozDM=",
+            "https://t3.ftcdn.net/jpg/04/64/08/62/360_F_464086266_JkXQZb3mMlrmEUGuArHALuX5iRN2wMmJ.jpg",
+            "https://media.istockphoto.com/id/606223864/photo/view-of-gangtok-the-capital-city-of-sikkim-india.jpg?s=612x612&w=0&k=20&c=UEKddFCWZcHG-x9ru-Lles8FiPv1wMTviTD4QeFlBo4=",
+            "https://thumbs.dreamstime.com/b/aerial-view-gangtok-city-image-beautiful-sikkim-india-rope-way-one-beautiful-well-managed-north-east-33819494.jpg",
+            "https://media.istockphoto.com/id/508546723/photo/tsomgo-lake.jpg?s=612x612&w=0&k=20&c=_FyIQE3KLopBsmJUscvdA0XsZXjJ2V_aBDRlKRMMgig=",
+            "https://images.unsplash.com/photo-1615874226138-b37fcf3d75b2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRzb21nbyUyMGxha2V8ZW58MHx8MHx8fDA%3D",
+            "https://upload.wikimedia.org/wikipedia/commons/f/f2/Tsomgo_Lake%2C_Sikkim.jpg",
           ],
           start: "Guwahati",
           end: "Guwahati",
@@ -758,7 +841,7 @@ export const toursData = {
           description: "Two safaris + stay.",
           days: 5,
           nights: 4,
-          banner: "https://source.unsplash.com/1600x900/?kaziranga,elephant",
+          banner: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww",
           intro:
             "Embark on an extraordinary Himalayan adventure with this 11 Nights 12 Days Darjeeling, Gangtok, Lachen, Lachung, Pelling, and Namchi tour. This comprehensive itinerary is designed for travelers seeking natural beauty, cultural immersion, and peaceful hill-station retreats. Begin your journey in Darjeeling, exploring colonial charm, lush tea gardens, vibrant local markets, and a breathtaking sunrise at Tiger Hill overlooking Kanchenjunga. Continue to Gangtok, the capital of Sikkim, visiting ancient monasteries, panoramic viewpoints, and MG Marg’s bustling streets. Experience the pristine villages of Lachen and Lachung, including Gurudongmar Lake and Yumthang Valley, offering serene Himalayan landscapes. Explore Pelling’s Pemayangtse Monastery, Kanchenjunga Falls, and surrounding scenic vistas. Conclude in Namchi, witnessing the famous Char Dham, Solophok, and cultural heritage sites. This tour balances sightseeing, relaxation, and local experiences, perfect for families, couples, and nature enthusiasts. Capture mesmerizing landscapes, savor authentic local cuisine, and immerse yourself in Himalayan culture for an unforgettable journey.",
           shortItinerary: [
@@ -776,9 +859,15 @@ export const toursData = {
             "Day 12: Namchi Sightseeing & Departure",
           ],
           expect: [
-            "Multiple jeep/elephant safaris (park entry included)",
-            "Comfortable lodge stays near the park",
-            "Local Assamese cuisine & cultural visits",
+            "Transport and accommodation is already organized",
+            "Local and knowledgeable guides",
+            "The Natural Paradise",
+            "Easy to Plan and Book",
+            "Great Gift and Safety",
+            "The Best in Hospitality",
+            "Land of Peace & Spirituality",
+            "Tour the Incredible Wildlife",
+            "Value for Money",
           ],
           itinerary: [
             {
@@ -843,9 +932,13 @@ export const toursData = {
             },
           ],
           gallery: [
-            "https://source.unsplash.com/800x600/?kaziranga",
-            "https://source.unsplash.com/800x600/?assam,tea",
-            "https://source.unsplash.com/800x600/?elephant",
+            "https://media.istockphoto.com/id/1323555810/photo/morning-sunrise-view.jpg?s=612x612&w=0&k=20&c=bQgY62S2xnaK9ME344q2JIY4vJoCUfWBeVEi9WNozDM=",
+            "https://t3.ftcdn.net/jpg/04/64/08/62/360_F_464086266_JkXQZb3mMlrmEUGuArHALuX5iRN2wMmJ.jpg",
+            "https://media.istockphoto.com/id/606223864/photo/view-of-gangtok-the-capital-city-of-sikkim-india.jpg?s=612x612&w=0&k=20&c=UEKddFCWZcHG-x9ru-Lles8FiPv1wMTviTD4QeFlBo4=",
+            "https://thumbs.dreamstime.com/b/aerial-view-gangtok-city-image-beautiful-sikkim-india-rope-way-one-beautiful-well-managed-north-east-33819494.jpg",
+            "https://media.istockphoto.com/id/508546723/photo/tsomgo-lake.jpg?s=612x612&w=0&k=20&c=_FyIQE3KLopBsmJUscvdA0XsZXjJ2V_aBDRlKRMMgig=",
+            "https://images.unsplash.com/photo-1615874226138-b37fcf3d75b2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRzb21nbyUyMGxha2V8ZW58MHx8MHx8fDA%3D",
+            "https://upload.wikimedia.org/wikipedia/commons/f/f2/Tsomgo_Lake%2C_Sikkim.jpg",
           ],
           start: "Guwahati",
           end: "Guwahati",
@@ -863,7 +956,7 @@ export const toursData = {
           description: "Scenic monasteries, mountain passes & local culture.",
           days: 5,
           nights: 4,
-          banner: "https://source.unsplash.com/1600x900/?tawang,monastery",
+          banner: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww",
           intro:
             "Embark on a spiritual and scenic journey to Arunachal Pradesh with this 4 Nights 5 Days Tawang & Bomdila tour. Experience the breathtaking drive through misty valleys, visit the famous Bomdila Monastery, and cross the iconic Sela Pass. In Tawang, explore the grand Tawang Monastery, the largest in India, and pay respects at the Jaswant Garh War Memorial. Enjoy the tranquility of lakes, snow-covered mountains, and the unique culture of the Monpa tribes. This tour perfectly blends nature, history, and spirituality for travelers seeking a serene Himalayan escape.",
           shortItinerary: [
@@ -874,9 +967,15 @@ export const toursData = {
             "Day 5: Departure from Tawang – Return to Guwahati",
           ],
           expect: [
-            "Visit the largest monastery in India – Tawang Monastery",
-            "Drive across scenic Sela Pass",
-            "Cultural interactions with the Monpa tribe",
+            "Transport and accommodation is already organized",
+            "Local and knowledgeable guides",
+            "The Natural Paradise",
+            "Easy to Plan and Book",
+            "Great Gift and Safety",
+            "The Best in Hospitality",
+            "Land of Peace & Spirituality",
+            "Tour the Incredible Wildlife",
+            "Value for Money",
           ],
           itinerary: [
             {
@@ -906,9 +1005,9 @@ export const toursData = {
             },
           ],
           gallery: [
-            "https://source.unsplash.com/800x600/?tawang,monastery",
-            "https://source.unsplash.com/800x600/?sela,pass",
-            "https://source.unsplash.com/800x600/?bomdila",
+            "https://media.istockphoto.com/id/910430170/photo/tawang-arunachal-pradesh.jpg?s=612x612&w=0&k=20&c=MKKYsHH_6JRMYROO2bHIsQAW9XoSnl-9nkRGOFgAg0M=",
+            "https://media.istockphoto.com/id/484711920/photo/tawang-monastery-arunachal-pradesh.jpg?s=612x612&w=0&k=20&c=s0ic_pkK28PnX02apET6tprFiY3vvECUPKre7Gjjt5U=",
+            "https://media.istockphoto.com/id/1165696115/photo/tawang.jpg?s=612x612&w=0&k=20&c=m3fN2T_6m10bKN48lfH2gWq_tgyXeV5K9QacR30CZ7I=",
           ],
           start: "Guwahati",
           end: "Guwahati",
@@ -921,7 +1020,7 @@ export const toursData = {
             "Extended Arunachal journey with Dirang Valley and Tawang.",
           days: 6,
           nights: 5,
-          banner: "https://source.unsplash.com/1600x900/?arunachal,valley",
+          banner: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dHJhdmVsfGVufDB8fDB8fHww",
           intro:
             "This 5 Nights 6 Days tour takes you deep into the heart of Arunachal Pradesh. Begin your journey in Bomdila, then continue to the scenic Dirang Valley, known for its hot springs, apple orchards, and monasteries. Travel further to Tawang, crossing the snow-covered Sela Pass. Explore Tawang Monastery, Jaswant Garh, and stunning alpine lakes. Immerse yourself in the local Monpa culture and enjoy serene mountain landscapes. A perfect itinerary for those who want to combine adventure, spirituality, and cultural immersion in the Eastern Himalayas.",
           shortItinerary: [
@@ -933,9 +1032,15 @@ export const toursData = {
             "Day 6: Departure – Return to Guwahati",
           ],
           expect: [
-            "Stay amidst scenic Dirang Valley",
-            "Visit Tawang Monastery & Jaswant Garh",
-            "Cross the iconic Sela Pass",
+            "Transport and accommodation is already organized",
+            "Local and knowledgeable guides",
+            "The Natural Paradise",
+            "Easy to Plan and Book",
+            "Great Gift and Safety",
+            "The Best in Hospitality",
+            "Land of Peace & Spirituality",
+            "Tour the Incredible Wildlife",
+            "Value for Money",
           ],
           itinerary: [
             {
@@ -970,9 +1075,13 @@ export const toursData = {
             },
           ],
           gallery: [
-            "https://source.unsplash.com/800x600/?dirang,valley",
-            "https://source.unsplash.com/800x600/?tawang,india",
-            "https://source.unsplash.com/800x600/?sela,arunachal",
+            "https://media.istockphoto.com/id/1323555810/photo/morning-sunrise-view.jpg?s=612x612&w=0&k=20&c=bQgY62S2xnaK9ME344q2JIY4vJoCUfWBeVEi9WNozDM=",
+            "https://t3.ftcdn.net/jpg/04/64/08/62/360_F_464086266_JkXQZb3mMlrmEUGuArHALuX5iRN2wMmJ.jpg",
+            "https://media.istockphoto.com/id/606223864/photo/view-of-gangtok-the-capital-city-of-sikkim-india.jpg?s=612x612&w=0&k=20&c=UEKddFCWZcHG-x9ru-Lles8FiPv1wMTviTD4QeFlBo4=",
+            "https://thumbs.dreamstime.com/b/aerial-view-gangtok-city-image-beautiful-sikkim-india-rope-way-one-beautiful-well-managed-north-east-33819494.jpg",
+            "https://media.istockphoto.com/id/508546723/photo/tsomgo-lake.jpg?s=612x612&w=0&k=20&c=_FyIQE3KLopBsmJUscvdA0XsZXjJ2V_aBDRlKRMMgig=",
+            "https://images.unsplash.com/photo-1615874226138-b37fcf3d75b2?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRzb21nbyUyMGxha2V8ZW58MHx8MHx8fDA%3D",
+            "https://upload.wikimedia.org/wikipedia/commons/f/f2/Tsomgo_Lake%2C_Sikkim.jpg",
           ],
           start: "Guwahati",
           end: "Guwahati",

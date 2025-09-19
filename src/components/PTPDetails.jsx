@@ -196,7 +196,7 @@ const PTPDetails = () => {
             className="text-center z-10 px-4"
           >
             <h1
-              className="text-5xl md:text-4xl font-bold mb-4 tracking-wide"
+              className="text-2xl md:text-4xl font-bold mb-4 tracking-wide"
               style={{
                 color: "#e8bb47ff",
                 textShadow: "0 4px 12px rgba(0,0,0,0.3)",
@@ -510,9 +510,9 @@ const PTPDetails = () => {
                 </div>
 
                 {/* Timeline */}
-                <div className="relative pl-10">
+                <div className="relative pl-0 md:pl-10">
                   {/* Vertical Line */}
-                  <div className="absolute top-0 left-16 bottom-0 w-0.5 bg-gradient-to-b from-yellow-400 to-yellow-600"></div>
+                  <div className="absolute hidden sm:block top-0 left-16 bottom-0 w-0.5 bg-gradient-to-b from-yellow-400 to-yellow-600"></div>
 
                   {/* Itinerary Items */}
                   <div className="space-y-10">
@@ -526,7 +526,7 @@ const PTPDetails = () => {
                         className="relative flex items-start gap-6"
                       >
                         {/* Day Badge */}
-                        <div className="relative z-10">
+                        <div className="relative z-10 hidden sm:block">
                           <span className="w-12 h-12 flex items-center justify-center rounded-full text-white font-bold text-lg shadow-md bg-gradient-to-br from-yellow-700 to-yellow-500">
                             {idx + 1}
                           </span>
