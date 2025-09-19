@@ -11,123 +11,7 @@ import {
   FaEnvelope,
   FaCheck,
 } from "react-icons/fa";
-
-const toursData = {
-  odisha: [
-    {
-      id: "puri-konark",
-      name: "Devotional Tours",
-      packages: [
-        {
-          id: "basic",
-          name: "2 Nights 3 Days Package",
-          days: 3,
-          nights: 2,
-          img: "https://media.istockphoto.com/id/1444924249/photo/konark-sun-temple-at-sunrise-konark-temple-is-a-unesco-world-heritage-site-at-puri-odisha.jpg?s=612x612&w=0&k=20&c=5Gd3UDpZeYh8DejD4a4TTrpAZLoPw5SARAUFT7hfwRk=",
-          start: "Puri",
-          end: "Konark",
-          description:
-            "Perfect for first-time visitors. Explore the sacred Jagannath Temple, Konark Sun Temple, and Puri beach.",
-        },
-        {
-          id: "premium",
-          name: "4 Nights 5 Days Package",
-          days: 5,
-          nights: 4,
-          img: "https://www.holidify.com/images/cmsuploads/compressed/attr_2321_20200217143815.jpg",
-          start: "Puri",
-          end: "Bhubaneswar",
-          description:
-            "Includes temples, beaches, and heritage sites. Covers Bhubaneswar temples, Konark, and Chilika Lake.",
-        },
-      ],
-    },
-    {
-      id: "bhubaneswar-city",
-      name: "Tribal Tours",
-      packages: [
-        {
-          id: "basic",
-          name: "2 Nights 3 Days Package",
-          days: 3,
-          nights: 2,
-          img: "https://dulcimertours.com/wp-content/uploads/2020/08/New-Image.jpg",
-          start: "Bhubaneswar",
-          end: "Koraput",
-          description:
-            "Explore Bhubaneswar’s ancient temples and tribal art museums. Short but enriching experience.",
-        },
-        {
-          id: "premium",
-          name: "5 Nights 6 Days Package",
-          days: 6,
-          nights: 5,
-          img: "https://odishatourism.gov.in/content/dam/tourism/home/discover/tribes-of-odisha.jpg",
-          start: "Bhubaneswar",
-          end: "Koraput",
-          description:
-            "Extended journey covering tribal villages, handicrafts, and vibrant festivals with cultural immersion.",
-        },
-      ],
-    },
-    {
-      id: "chilika-lake",
-      name: "Wildlife and Adventure Tours",
-      packages: [
-        {
-          id: "basic",
-          name: "2 Nights 3 Days Package",
-          days: 3,
-          nights: 2,
-          img: "https://www.indiadrivertours.com/wp-content/uploads/2022/05/raj-tigerleopardtour.jpg",
-          start: "Chilika",
-          end: "Satapada",
-          description:
-            "Enjoy boat rides on Chilika Lake, spot migratory birds, and visit dolphin hotspots.",
-        },
-        {
-          id: "premium",
-          name: "4 Nights 5 Days Package",
-          days: 5,
-          nights: 4,
-          img: "https://images.unsplash.com/photo-1599058917212-6dcf2ce2743d",
-          start: "Chilika",
-          end: "Satapada",
-          description:
-            "Extended adventure with Chilika Lake, dolphin watching, trekking, and wildlife sanctuaries.",
-        },
-      ],
-    },
-    {
-      id: "simlipal",
-      name: "Senior Citizen Tours",
-      packages: [
-        {
-          id: "basic",
-          name: "3 Nights 4 Days Package",
-          days: 4,
-          nights: 3,
-          img: "https://img.freepik.com/free-photo/seniors-with-map_1098-14988.jpg",
-          start: "Cuttack",
-          end: "Simlipal",
-          description:
-            "Relaxing tour designed for seniors. Covers Simlipal forest safari and peaceful nature walks.",
-        },
-        {
-          id: "premium",
-          name: "6 Nights 7 Days Package",
-          days: 7,
-          nights: 6,
-          img: "https://i.ytimg.com/vi/tQkhtjfiVno/maxresdefault.jpg",
-          start: "Cuttack",
-          end: "Simlipal",
-          description:
-            "Leisurely journey with more time in Simlipal, nature resorts, and assisted guided experiences.",
-        },
-      ],
-    },
-  ],
-};
+import { toursData } from "../data/OdtPackage";
 
 const whyBookWithUs = [
   "Expertly crafted itineraries by travel specialists",
@@ -255,7 +139,7 @@ export default function TourPackage() {
                 {packages.map((pkg) => (
                   <div
                     key={pkg.id}
-                    className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border"
+                    className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 "
                   >
                     <div className="relative">
                       <img
@@ -303,7 +187,9 @@ export default function TourPackage() {
                           View Details
                         </button>
                         <button
-                          onClick={() => handleCallNow(pkg.name)}
+                          onClick={() =>
+                            (window.location.href = "tel:+919337124745")
+                          }
                           className="flex-1 bg-white border border-yellow-600 text-yellow-700 font-medium py-2 px-4 rounded-full text-sm shadow-sm hover:bg-yellow-50 transition-all duration-300"
                         >
                           Call Now
@@ -349,7 +235,7 @@ export default function TourPackage() {
                   </div>
                   <div>
                     <p className="text-sm opacity-80">Call us now</p>
-                    <p className="font-semibold">+91 98765 43210</p>
+                    <p className="font-semibold">+91 9337124745</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -358,11 +244,16 @@ export default function TourPackage() {
                   </div>
                   <div>
                     <p className="text-sm opacity-80">Email us</p>
-                    <p className="font-semibold">info@premiumtours.com</p>
+                    <p className="font-semibold">
+                      info@easternindiatravels.com
+                    </p>
                   </div>
                 </div>
               </div>
-              <button className="mt-6 w-full bg-white text-yellow-700 font-semibold py-3 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
+              <button
+                onClick={() => (window.location.href = "tel:+919337124745")}
+                className="mt-6 w-full bg-white text-yellow-700 font-semibold py-3 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+              >
                 Request Callback
               </button>
             </div>

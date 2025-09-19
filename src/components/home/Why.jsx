@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaStar, FaHeadset, FaGlobeAsia, FaUserTie } from "react-icons/fa";
 
 const reasons = [
@@ -31,28 +32,52 @@ const reasons = [
 export default function WhyChooseUs() {
   return (
     <section className="relative bg-gradient-to-br from-[#0D0D0D] via-[#1A1A1A] to-black text-white py-20 px-6 sm:px-10 lg:px-20 overflow-hidden">
-      {/* Glow Backgrounds */}
-      {/* <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-amber-400 opacity-20 blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-yellow-500 opacity-20 blur-3xl animate-pulse"></div> */}
-
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
             Why Travel With Us?
           </h2>
-          <div className="h-1.5 w-28 bg-gradient-to-r from-amber-300 to-yellow-500 mx-auto mt-5 rounded-full shadow-md"></div>
+          <motion.div
+            className="h-1.5 w-28 bg-gradient-to-r from-amber-300 to-yellow-500 mx-auto mt-5 rounded-full shadow-md"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          ></motion.div>
           <p className="mt-6 text-lg md:text-xl text-yellow-100 font-light max-w-2xl mx-auto">
             We combine passion, expertise, and care to create unforgettable
             journeys that go beyond the ordinary.
           </p>
-        </div>
+        </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: { staggerChildren: 0.2 },
+            },
+          }}
+        >
           {reasons.map((reason, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.8 }}
               className="group relative bg-gradient-to-br from-[#8F520B]/95 to-[#5A3003]/95 border border-[#A5661D]/90 
              rounded-3xl p-8 shadow-xl backdrop-blur-sm 
              hover:shadow-amber-400/50 hover:-translate-y-4 hover:scale-[1.02]
@@ -65,13 +90,15 @@ export default function WhyChooseUs() {
               ></div>
 
               {/* Floating Icon */}
-              <div
+              <motion.div
+                whileHover={{ rotate: [0, -10, 10, 0] }}
+                transition={{ duration: 0.6 }}
                 className="relative flex items-center justify-center w-16 h-16 rounded-full 
                   bg-gradient-to-br from-amber-400 to-yellow-600 mb-6 
                   shadow-lg group-hover:scale-110 transition-transform duration-500"
               >
                 <reason.icon className="text-3xl text-white drop-shadow-md" />
-              </div>
+              </motion.div>
 
               {/* Title */}
               <h3
@@ -91,9 +118,9 @@ export default function WhyChooseUs() {
                 className="h-1.5 w-14 bg-gradient-to-r from-amber-400 to-yellow-600 rounded-full 
                   group-hover:w-24 transition-all duration-500"
               ></div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -6,48 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Phone, Eye, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-
-// Tours Data
-const tours = {
-  odisha: [
-    {
-      id: "puri-konark",
-      name: "Devotional Tours",
-      days: 3,
-      nights: 2,
-      start: "Puri",
-      end: "Konark",
-      img: "https://media.istockphoto.com/id/1444924249/photo/konark-sun-temple-at-sunrise-konark-temple-is-a-unesco-world-heritage-site-at-puri-odisha.jpg?s=612x612&w=0&k=20&c=5Gd3UDpZeYh8DejD4a4TTrpAZLoPw5SARAUFT7hfwRk=",
-    },
-    {
-      id: "bhubaneswar-city",
-      name: "Tribal Tours",
-      days: 2,
-      nights: 1,
-      start: "Bhubaneswar",
-      end: "Koraput",
-      img: "https://dulcimertours.com/wp-content/uploads/2020/08/New-Image.jpg",
-    },
-    {
-      id: "chilika-lake",
-      name: "Wildlife and Adventure Tours",
-      days: 2,
-      nights: 1,
-      start: "Chilika",
-      end: "Satapada",
-      img: "https://www.indiadrivertours.com/wp-content/uploads/2022/05/raj-tigerleopardtour.jpg",
-    },
-    {
-      id: "simlipal",
-      name: "Senior Citizen Tours",
-      days: 3,
-      nights: 2,
-      start: "Cuttack",
-      end: "Simlipal",
-      img: "https://img.freepik.com/free-photo/seniors-with-map_1098-14988.jpg?semt=ais_hybrid&w=740",
-    },
-  ],
-};
+import { tours } from "../../data/Odtour";
 
 const PopularTours = ({ showHeading = true }) => {
   const containerVariants = {
@@ -116,9 +75,13 @@ const PopularTours = ({ showHeading = true }) => {
 
           {/* Actions */}
           <div className="flex flex-col sm:flex-row gap-3 mt-4">
-            <button className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-700 to-yellow-500 text-white py-3 rounded-lg font-medium shadow hover:from-yellow-600 hover:to-yellow-400 hover:shadow-lg transition-all duration-300">
+            <a
+              href="tel:+919337124745"
+              className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-700 to-yellow-500 text-white py-3 rounded-lg font-medium shadow hover:from-yellow-600 hover:to-yellow-400 hover:shadow-lg transition-all duration-300"
+            >
               <Phone size={16} /> Call
-            </button>
+            </a>
+
             <Link
               to={`/tour-package/${tour.id}`}
               className="flex-1 flex items-center justify-center gap-2 border border-zinc-300 text-zinc-700 py-3 rounded-lg font-medium hover:border-yellow-600 hover:text-yellow-700 hover:shadow-md transition-all duration-300"

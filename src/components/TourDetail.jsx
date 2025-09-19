@@ -5,503 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import RelatedT from "./RelatedT";
 import Testi2 from "./home/Testi2";
-
-// Import the tours data
-const toursData = {
-  odisha: [
-    {
-      id: "puri-konark",
-      name: "Devotional Tours",
-      days: 3,
-      nights: 2,
-      start: "Puri",
-      end: "Konark",
-      img: "https://media.istockphoto.com/id/1444924249/photo/konark-sun-temple-at-sunrise-konark-temple-is-a-unesco-world-heritage-site-at-puri-odisha.jpg?s=612x612&w=0&k=20&c=5Gd3UDpZeYh8DejD4a4TTrpAZLoPw5SARAUFT7hfwRk=",
-      packages: {
-        basic: {
-          id: "basic",
-          name: "2 Nights 3 Days Package",
-          days: 3,
-          nights: 2,
-          img: "https://media.istockphoto.com/id/1444924249/photo/konark-sun-temple-at-sunrise-konark-temple-is-a-unesco-world-heritage-site-at-puri-odisha.jpg?s=612x612&w=0&k=20&c=5Gd3UDpZeYh8DejD4a4TTrpAZLoPw5SARAUFT7hfwRk=",
-          start: "Puri",
-          end: "Konark",
-          banner: "https://source.unsplash.com/1600x600/?puri,beach",
-          description:
-            "Perfect for first-time visitors. Explore the sacred Jagannath Temple, Konark Sun Temple, and Puri beach.",
-          intro:
-            "Explore the sacred city of Puri and the magnificent Konark Sun Temple. This tour offers a perfect mix of spirituality, heritage, and coastal charm.",
-          shortItinerary: [
-            "Day 1: Arrival in Bhubaneswar & transfer to Puri",
-            "Day 2: Jagannath Temple & Konark Sun Temple",
-            "Day 3: Chilika Lake excursion & departure",
-          ],
-          expect: [
-            "Darshan at Jagannath Temple",
-            "UNESCO Konark Sun Temple visit",
-            "Scenic boat ride at Chilika",
-            "Puri Beach leisure walk",
-          ],
-          itinerary: [
-            {
-              day: "Day 1",
-              detail:
-                "Arrival at Bhubaneswar, transfer to Puri. Evening walk on Puri Beach.",
-            },
-            {
-              day: "Day 2",
-              detail:
-                "Morning visit to Jagannath Temple. Afternoon excursion to Konark Sun Temple. Evening free in Puri.",
-            },
-            {
-              day: "Day 3",
-              detail:
-                "Day trip to Chilika Lake for dolphin spotting. Drop at Bhubaneswar for departure.",
-            },
-          ],
-          gallery: [
-            "https://source.unsplash.com/600x400/?puri",
-            "https://source.unsplash.com/600x400/?konark",
-            "https://source.unsplash.com/600x400/?chilika",
-          ],
-        },
-        premium: {
-          id: "premium",
-          name: "4 Nights 5 Days Package",
-          days: 5,
-          nights: 4,
-          img: "https://www.holidify.com/images/cmsuploads/compressed/attr_2321_20200217143815.jpg",
-          start: "Puri",
-          end: "Bhubaneswar",
-          banner: "https://source.unsplash.com/1600x600/?bhubaneswar,temple",
-          description:
-            "Includes temples, beaches, and heritage sites. Covers Bhubaneswar temples, Konark, and Chilika Lake.",
-          intro:
-            "Experience the spiritual heart of Odisha with this extended tour covering Puri, Konark, Bhubaneswar temples, and Chilika Lake.",
-          shortItinerary: [
-            "Day 1: Arrival in Bhubaneswar & transfer to Puri",
-            "Day 2: Jagannath Temple & Konark Sun Temple",
-            "Day 3: Chilika Lake excursion",
-            "Day 4: Bhubaneswar temple tour",
-            "Day 5: Departure",
-          ],
-          expect: [
-            "Jagannath Temple darshan",
-            "Konark Sun Temple exploration",
-            "Chilika Lake dolphin spotting",
-            "Lingaraj Temple visit",
-            "Udayagiri caves exploration",
-          ],
-          itinerary: [
-            {
-              day: "Day 1",
-              detail:
-                "Arrival at Bhubaneswar, transfer to Puri. Evening walk on Puri Beach.",
-            },
-            {
-              day: "Day 2",
-              detail:
-                "Morning visit to Jagannath Temple. Afternoon excursion to Konark Sun Temple. Evening free in Puri.",
-            },
-            {
-              day: "Day 3",
-              detail:
-                "Full day excursion to Chilika Lake for dolphin spotting and bird watching.",
-            },
-            {
-              day: "Day 4",
-              detail:
-                "Transfer to Bhubaneswar. Visit Lingaraj Temple, Rajarani Temple, and Udayagiri caves.",
-            },
-            {
-              day: "Day 5",
-              detail: "Morning at leisure. Departure from Bhubaneswar.",
-            },
-          ],
-          gallery: [
-            "https://source.unsplash.com/600x400/?puri",
-            "https://source.unsplash.com/600x400/?konark",
-            "https://source.unsplash.com/600x400/?chilika",
-            "https://source.unsplash.com/600x400/?bhubaneswar",
-            "https://source.unsplash.com/600x400/?lingaraj",
-          ],
-        },
-      },
-    },
-    {
-      id: "bhubaneswar-city",
-      name: "Tribal Tours",
-      days: 2,
-      nights: 1,
-      start: "Bhubaneswar",
-      end: "Koraput",
-      img: "https://dulcimertours.com/wp-content/uploads/2020/08/New-Image.jpg",
-      packages: {
-        basic: {
-          id: "basic",
-          name: "2 Nights 3 Days Package",
-          days: 3,
-          nights: 2,
-          img: "https://dulcimertours.com/wp-content/uploads/2020/08/New-Image.jpg",
-          start: "Bhubaneswar",
-          end: "Koraput",
-          banner: "https://source.unsplash.com/1600x600/?bhubaneswar,temple",
-          description:
-            "Explore Bhubaneswar's ancient temples and tribal art museums. Short but enriching experience.",
-          intro:
-            "Bhubaneswar, the 'Temple City of India', is filled with ancient temples, caves, and museums reflecting Odisha's rich heritage.",
-          shortItinerary: [
-            "Day 1: Arrival & Bhubaneswar sightseeing",
-            "Day 2: Tribal village visit",
-            "Day 3: Departure",
-          ],
-          expect: [
-            "Ancient Lingaraj Temple",
-            "Udayagiri & Khandagiri caves",
-            "Odisha State Museum",
-            "Tribal village interaction",
-          ],
-          itinerary: [
-            {
-              day: "Day 1",
-              detail:
-                "Visit Lingaraj Temple, Mukteshwar Temple, and Rajarani Temple.",
-            },
-            {
-              day: "Day 2",
-              detail:
-                "Explore Udayagiri & Khandagiri caves, Odisha State Museum, and visit a tribal village.",
-            },
-            {
-              day: "Day 3",
-              detail: "Morning leisure and departure.",
-            },
-          ],
-          gallery: [
-            "https://source.unsplash.com/600x400/?lingaraj,temple",
-            "https://source.unsplash.com/600x400/?bhubaneswar",
-            "https://source.unsplash.com/600x400/?tribal,village",
-          ],
-        },
-        premium: {
-          id: "premium",
-          name: "5 Nights 6 Days Package",
-          days: 6,
-          nights: 5,
-          img: "https://odishatourism.gov.in/content/dam/tourism/home/discover/tribes-of-odisha.jpg",
-          start: "Bhubaneswar",
-          end: "Koraput",
-          banner: "https://source.unsplash.com/1600x600/?koraput,tribal",
-          description:
-            "Extended journey covering tribal villages, handicrafts, and vibrant festivals with cultural immersion.",
-          intro:
-            "Immerse yourself in the rich tribal culture of Odisha with visits to remote villages, interaction with tribal communities, and exploration of ancient heritage sites.",
-          shortItinerary: [
-            "Day 1: Arrival in Bhubaneswar",
-            "Day 2: Bhubaneswar sightseeing",
-            "Day 3: Journey to Koraput",
-            "Day 4: Tribal village visits",
-            "Day 5: Tribal markets & handicrafts",
-            "Day 6: Return to Bhubaneswar & departure",
-          ],
-          expect: [
-            "Multiple tribal village visits",
-            "Tribal dance performances",
-            "Handicraft workshops",
-            "Interaction with tribal communities",
-            "Tribal cuisine experience",
-          ],
-          itinerary: [
-            {
-              day: "Day 1",
-              detail: "Arrival at Bhubaneswar. Evening at leisure.",
-            },
-            {
-              day: "Day 2",
-              detail:
-                "Full day Bhubaneswar sightseeing including temples, caves, and museums.",
-            },
-            {
-              day: "Day 3",
-              detail:
-                "Drive to Koraput. Enroute visit tribal villages. Evening at Koraput.",
-            },
-            {
-              day: "Day 4",
-              detail:
-                "Full day tribal village visits including interaction with tribal communities.",
-            },
-            {
-              day: "Day 5",
-              detail:
-                "Visit tribal markets and handicraft workshops. Tribal cultural evening.",
-            },
-            {
-              day: "Day 6",
-              detail: "Return to Bhubaneswar. Departure.",
-            },
-          ],
-          gallery: [
-            "https://source.unsplash.com/600x400/?tribal,dance",
-            "https://source.unsplash.com/600x400/?koraput",
-            "https://source.unsplash.com/600x400/?tribal,market",
-            "https://source.unsplash.com/600x400/?handicrafts",
-            "https://source.unsplash.com/600x400/?tribal,village",
-          ],
-        },
-      },
-    },
-    {
-      id: "chilika-lake",
-      name: "Wildlife and Adventure Tours",
-      days: 2,
-      nights: 1,
-      start: "Chilika",
-      end: "Satapada",
-      img: "https://www.indiadrivertours.com/wp-content/uploads/2022/05/raj-tigerleopardtour.jpg",
-      packages: {
-        basic: {
-          id: "basic",
-          name: "2 Nights 3 Days Package",
-          days: 3,
-          nights: 2,
-          img: "https://www.indiadrivertours.com/wp-content/uploads/2022/05/raj-tigerleopardtour.jpg",
-          start: "Chilika",
-          end: "Satapada",
-          banner: "https://source.unsplash.com/1600x600/?chilika,lake",
-          description:
-            "Enjoy boat rides on Chilika Lake, spot migratory birds, and visit dolphin hotspots.",
-          intro:
-            "Chilika Lake is Asia's largest brackish water lagoon, home to dolphins, migratory birds, and scenic islands.",
-          shortItinerary: [
-            "Day 1: Arrival & transfer to Chilika",
-            "Day 2: Nalaban Bird Sanctuary & Satapada",
-            "Day 3: Departure",
-          ],
-          expect: [
-            "Scenic boat ride at Satapada",
-            "Dolphin spotting",
-            "Birdwatching at Nalaban Sanctuary",
-            "Sunset views over the lake",
-          ],
-          itinerary: [
-            {
-              day: "Day 1",
-              detail:
-                "Arrival at Bhubaneswar, transfer to Chilika. Evening boat ride.",
-            },
-            {
-              day: "Day 2",
-              detail:
-                "Morning visit to Nalaban Bird Sanctuary. Afternoon dolphin spotting at Satapada.",
-            },
-            {
-              day: "Day 3",
-              detail: "Return journey after breakfast.",
-            },
-          ],
-          gallery: [
-            "https://source.unsplash.com/600x400/?chilika",
-            "https://source.unsplash.com/600x400/?dolphin",
-            "https://source.unsplash.com/600x400/?birdwatching",
-          ],
-        },
-        premium: {
-          id: "premium",
-          name: "4 Nights 5 Days Package",
-          days: 5,
-          nights: 4,
-          img: "https://images.unsplash.com/photo-1599058917212-6dcf2ce2743d",
-          start: "Chilika",
-          end: "Satapada",
-          banner: "https://source.unsplash.com/1600x600/?satapada,dolphin",
-          description:
-            "Extended adventure with Chilika Lake, dolphin watching, trekking, and wildlife sanctuaries.",
-          intro:
-            "Experience the best of Chilika Lake and surrounding wildlife sanctuaries with this extended adventure package.",
-          shortItinerary: [
-            "Day 1: Arrival & transfer to Chilika",
-            "Day 2: Chilika Lake exploration",
-            "Day 3: Nalaban Bird Sanctuary",
-            "Day 4: Satapada & dolphin watching",
-            "Day 5: Departure",
-          ],
-          expect: [
-            "Multiple boat rides on Chilika",
-            "Dolphin spotting at Satapada",
-            "Birdwatching at Nalaban",
-            "Island hopping",
-            "Sunset cruise",
-          ],
-          itinerary: [
-            {
-              day: "Day 1",
-              detail:
-                "Arrival at Bhubaneswar, transfer to Chilika. Evening at leisure.",
-            },
-            {
-              day: "Day 2",
-              detail:
-                "Full day Chilika Lake exploration including boat rides and island visits.",
-            },
-            {
-              day: "Day 3",
-              detail:
-                "Morning visit to Nalaban Bird Sanctuary. Afternoon at leisure.",
-            },
-            {
-              day: "Day 4",
-              detail:
-                "Full day at Satapada for dolphin watching and sunset cruise.",
-            },
-            {
-              day: "Day 5",
-              detail: "Return to Bhubaneswar for departure.",
-            },
-          ],
-          gallery: [
-            "https://source.unsplash.com/600x400/?chilika",
-            "https://source.unsplash.com/600x400/?dolphin",
-            "https://source.unsplash.com/600x400/?birdwatching",
-            "https://source.unsplash.com/600x400/?sunset,lake",
-            "https://source.unsplash.com/600x400/?island",
-          ],
-        },
-      },
-    },
-    {
-      id: "simlipal",
-      name: "Senior Citizen Tours",
-      days: 3,
-      nights: 2,
-      start: "Cuttack",
-      end: "Simlipal",
-      img: "https://img.freepik.com/free-photo/seniors-with-map_1098-14988.jpg",
-      packages: {
-        basic: {
-          id: "basic",
-          name: "3 Nights 4 Days Package",
-          days: 4,
-          nights: 3,
-          img: "https://img.freepik.com/free-photo/seniors-with-map_1098-14988.jpg",
-          start: "Cuttack",
-          end: "Simlipal",
-          banner: "https://source.unsplash.com/1600x600/?simlipal,forest",
-          description:
-            "Relaxing tour designed for seniors. Covers Simlipal forest safari and peaceful nature walks.",
-          intro:
-            "Simlipal National Park is a tiger reserve and biosphere, known for dense forests, waterfalls, and rich wildlife.",
-          shortItinerary: [
-            "Day 1: Arrival & transfer to Simlipal",
-            "Day 2: Jungle safari",
-            "Day 3: Nature walks",
-            "Day 4: Departure",
-          ],
-          expect: [
-            "Jungle safari experience",
-            "Nature walks",
-            "Waterfall visits",
-            "Wildlife spotting",
-          ],
-          itinerary: [
-            {
-              day: "Day 1",
-              detail:
-                "Arrival at Baripada, transfer to Simlipal. Evening nature walk.",
-            },
-            {
-              day: "Day 2",
-              detail: "Morning jungle safari. Afternoon at leisure.",
-            },
-            {
-              day: "Day 3",
-              detail:
-                "Visit to Barehipani and Joranda waterfalls. Nature walk.",
-            },
-            {
-              day: "Day 4",
-              detail: "Morning at leisure. Departure.",
-            },
-          ],
-          gallery: [
-            "https://source.unsplash.com/600x400/?simlipal",
-            "https://source.unsplash.com/600x400/?waterfall,forest",
-            "https://source.unsplash.com/600x400/?nature,walk",
-          ],
-        },
-        premium: {
-          id: "premium",
-          name: "6 Nights 7 Days Package",
-          days: 7,
-          nights: 6,
-          img: "https://i.ytimg.com/vi/tQkhtjfiVno/maxresdefault.jpg",
-          start: "Cuttack",
-          end: "Simlipal",
-          banner: "https://source.unsplash.com/1600x600/?simlipal,tiger",
-          description:
-            "Leisurely journey with more time in Simlipal, nature resorts, and assisted guided experiences.",
-          intro:
-            "Experience the tranquility of Simlipal with this extended tour designed for seniors, featuring comfortable stays and guided nature experiences.",
-          shortItinerary: [
-            "Day 1: Arrival & transfer to Simlipal",
-            "Day 2: Jungle safari",
-            "Day 3: Waterfall tour",
-            "Day 4: Tribal village visit",
-            "Day 5: Nature walks",
-            "Day 6: Leisure day",
-            "Day 7: Departure",
-          ],
-          expect: [
-            "Multiple jungle safaris",
-            "Waterfall visits",
-            "Tribal village interaction",
-            "Guided nature walks",
-            "Bird watching",
-            "Leisure time at resort",
-          ],
-          itinerary: [
-            {
-              day: "Day 1",
-              detail:
-                "Arrival at Baripada, transfer to Simlipal. Evening at resort.",
-            },
-            {
-              day: "Day 2",
-              detail: "Morning jungle safari. Afternoon at leisure.",
-            },
-            {
-              day: "Day 3",
-              detail: "Full day tour of Barehipani and Joranda waterfalls.",
-            },
-            {
-              day: "Day 4",
-              detail: "Visit to a local tribal village. Cultural evening.",
-            },
-            {
-              day: "Day 5",
-              detail: "Guided nature walks and bird watching.",
-            },
-            {
-              day: "Day 6",
-              detail: "Leisure day at resort. Optional spa treatments.",
-            },
-            {
-              day: "Day 7",
-              detail: "Morning at leisure. Departure.",
-            },
-          ],
-          gallery: [
-            "https://source.unsplash.com/600x400/?simlipal",
-            "https://source.unsplash.com/600x400/?tiger",
-            "https://source.unsplash.com/600x400/?waterfall,forest",
-            "https://source.unsplash.com/600x400/?tribal,village",
-            "https://source.unsplash.com/600x400/?resort,nature",
-          ],
-        },
-      },
-    },
-  ],
-};
+import { toursData } from "../data/OdtpDetails";
 
 const TourDetails = () => {
   const { tourId, packageId } = useParams();
@@ -554,8 +58,34 @@ const TourDetails = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for your enquiry! We'll get back to you soon.");
+
+    const whatsappNumber = "919337124745"; // Include country code (India: 91)
+
+    // Build WhatsApp message
+    const message = `
+*New Tour Enquiry*
+---------------------------------
+👤 Name: ${formData.name}
+📞 Phone: ${formData.number}
+📧 Email: ${formData.email}
+📅 Arrival Date: ${formData.arrivalDate}
+📅 Departure Date: ${formData.departureDate}
+👥 Persons: ${formData.persons}
+👶 Children: ${formData.children}
+📝 Message: ${formData.message || "N/A"}
+---------------------------------
+🌍 Tour: ${tour?.name || ""} - ${pkg?.name || ""}
+  `;
+
+    // Encode message for URL
+    const whatsappURL = `https://wa.me/${9337124745}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    // Open WhatsApp
+    window.open(whatsappURL, "_blank");
+
+    // Optionally reset form
     setFormData({
       name: "",
       number: "",
@@ -659,7 +189,7 @@ const TourDetails = () => {
             className="text-center z-10 px-4"
           >
             <h1
-              className="text-5xl md:text-5xl font-bold mb-4 tracking-wide"
+              className="text-2xl md:text-4xl font-bold mb-4 tracking-wide"
               style={{
                 color: "#e8bb47ff", // Darker golden color
                 textShadow: "0 4px 12px rgba(0,0,0,0.3)",
@@ -921,7 +451,7 @@ const TourDetails = () => {
                   </h2>
 
                   {/* Items */}
-                  <div className="grid gap-4">
+                  <div className="grid gap-4 md:grid-cols-2">
                     {pkg.expect.map((item, idx) => (
                       <div
                         key={idx}
@@ -980,9 +510,9 @@ const TourDetails = () => {
                 </div>
 
                 {/* Timeline */}
-                <div className="relative pl-10">
+                <div className="relative pl-0 md:pl-10">
                   {/* Vertical Line */}
-                  <div className="absolute top-0 left-16 bottom-0 w-0.5 bg-gradient-to-b from-yellow-400 to-yellow-600"></div>
+                  <div className="absolute hidden sm:block top-0 left-16 bottom-0 w-0.5 bg-gradient-to-b from-yellow-400 to-yellow-600"></div>
 
                   {/* Itinerary Items */}
                   <div className="space-y-10">
@@ -996,7 +526,7 @@ const TourDetails = () => {
                         className="relative flex items-start gap-6"
                       >
                         {/* Day Badge */}
-                        <div className="relative z-10">
+                        <div className="relative z-10 hidden sm:block">
                           <span className="w-12 h-12 flex items-center justify-center rounded-full text-white font-bold text-lg shadow-md bg-gradient-to-br from-yellow-700 to-yellow-500">
                             {idx + 1}
                           </span>
@@ -1128,6 +658,24 @@ const TourDetails = () => {
               >
                 Plan Your Journey
               </h3>
+              <p className="text-center my-6">
+                Call us:{" "}
+                <a
+                  href="tel:+919337124745"
+                  className="text-yellow-700 hover:underline"
+                >
+                  +91 9337124745
+                </a>{" "}
+                /{" "}
+                <a
+                  href="tel:+918456840041"
+                  className="text-yellow-700 hover:underline"
+                >
+                  +91 8456840041
+                </a>{" "}
+                or fill the booking form below
+              </p>
+
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">

@@ -6,72 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Phone, Eye, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-
-// Tours Data
-const tours = {
-  northeast: [
-    {
-      id: "meghalaya",
-      name: "Meghalaya Tour",
-      category: "north-east", // 🔹 Added category
-      days: 5,
-      nights: 4,
-      start: "Shillong",
-      end: "Cherrapunji",
-      img: "https://source.unsplash.com/600x400/?meghalaya,india",
-    },
-    {
-      id: "assam-safari",
-      name: "Assam Wildlife Safari",
-      category: "north-east",
-      days: 4,
-      nights: 3,
-      start: "Guwahati",
-      end: "Kaziranga",
-      img: "https://source.unsplash.com/600x400/?assam,india",
-    },
-    {
-      id: "sikkim-adventure",
-      name: "Sikkim Adventure",
-      category: "north-east",
-      days: 6,
-      nights: 5,
-      start: "Gangtok",
-      end: "Lachung",
-      img: "https://source.unsplash.com/600x400/?sikkim,india",
-    },
-    {
-      id: "arunachal",
-      name: "Arunachal Pradesh Tour",
-      category: "north-east",
-      days: 7,
-      nights: 6,
-      start: "Itanagar",
-      end: "Tawang",
-      img: "https://source.unsplash.com/600x400/?mountains,india",
-    },
-    {
-      id: "nagaland-culture",
-      name: "Nagaland Cultural Tour",
-      category: "north-east",
-      days: 5,
-      nights: 4,
-      start: "Kohima",
-      end: "Mokokchung",
-      img: "https://source.unsplash.com/600x400/?nagaland,india",
-    },
-    {
-      id: "tripura-gems",
-      name: "Tripura's Hidden Gems",
-      category: "north-east",
-      days: 4,
-      nights: 3,
-      start: "Agartala",
-      end: "Unakoti",
-      img: "https://source.unsplash.com/600x400/?tripura,india",
-    },
-  ],
-};
+import { tours } from "../../data/NEtour";
 
 const PopularTours2 = () => {
   const containerVariants = {
@@ -138,9 +73,12 @@ const PopularTours2 = () => {
 
           {/* Actions */}
           <div className="flex flex-col sm:flex-row gap-3 mt-4">
-            <button className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-700 to-yellow-500 text-white py-3 rounded-lg font-medium shadow hover:from-yellow-600 hover:to-yellow-400 hover:shadow-lg transition-all duration-300">
+            <a
+              href="tel:+919337124745"
+              className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-700 to-yellow-500 text-white py-3 rounded-lg font-medium shadow hover:from-yellow-600 hover:to-yellow-400 hover:shadow-lg transition-all duration-300"
+            >
               <Phone size={16} /> Call
-            </button>
+            </a>
             <Link
               to={`/popular-tours/${tour.category}/${tour.id}`} // 🔹 Updated route
               className="flex-1 flex items-center justify-center gap-2 border border-zinc-300 text-zinc-700 py-3 rounded-lg font-medium hover:border-yellow-600 hover:text-yellow-700 hover:shadow-md transition-all duration-300"
@@ -182,7 +120,9 @@ const PopularTours2 = () => {
             }}
             className="tour-swiper"
           >
-            {tours.northeast.map(renderTourCard)}
+            {[...tours.northeast, ...tours.northeast, ...tours.northeast].map(
+              renderTourCard
+            )}
           </Swiper>
         </motion.div>
       </div>

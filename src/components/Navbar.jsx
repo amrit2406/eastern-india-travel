@@ -49,7 +49,7 @@ export default function Navbar() {
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4" />
-              <span>Plot no - 1934/6866, Kishan Nagar, Satya Vihar, Rasulgarh, Bhubaneswar, Odisha 751010</span>
+              <span>Bhubaneswar, Odisha 751010</span>
             </div>
           </div>
 

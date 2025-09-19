@@ -11,100 +11,7 @@ import {
   FaEnvelope,
   FaCheck,
 } from "react-icons/fa";
-
-const toursData = {
-  northeast: [
-    {
-      id: "meghalaya",
-      name: "Meghalaya Tour",
-      days: 5,
-      nights: 4,
-      start: "Shillong",
-      end: "Cherrapunji",
-      img: "https://source.unsplash.com/600x400/?meghalaya,india",
-      packages: [
-        {
-          id: "pkg1",
-          name: "Standard Meghalaya",
-          description: "5 days exploring Shillong, Dawki, and Cherrapunji.",
-          location: "Shillong → Cherrapunji",
-          members: "10-15 people",
-          price: "₹15,999",
-          image: "https://source.unsplash.com/600x400/?shillong",
-        },
-        {
-          id: "pkg2",
-          name: "Luxury Meghalaya",
-          description:
-            "Premium stays with Dawki river boating and cave exploration.",
-          location: "Shillong → Cherrapunji",
-          members: "6-10 people",
-          price: "₹25,999",
-          image: "https://source.unsplash.com/600x400/?cherrapunji",
-        },
-      ],
-    },
-    {
-      id: "assam-safari",
-      name: "Assam Wildlife Safari",
-      days: 4,
-      nights: 3,
-      start: "Guwahati",
-      end: "Kaziranga",
-      img: "https://source.unsplash.com/600x400/?assam,india",
-      packages: [
-        {
-          id: "pkg1",
-          name: "Kaziranga Adventure",
-          description: "Jeep safari & river cruise with local village visit.",
-          location: "Guwahati → Kaziranga",
-          members: "12-18 people",
-          price: "₹18,499",
-          image: "https://source.unsplash.com/600x400/?kaziranga",
-        },
-      ],
-    },
-    {
-      id: "sikkim-adventure",
-      name: "Sikkim Adventure",
-      days: 6,
-      nights: 5,
-      start: "Gangtok",
-      end: "Lachung",
-      img: "https://source.unsplash.com/600x400/?sikkim,india",
-      packages: [
-        {
-          id: "pkg1",
-          name: "Budget Sikkim",
-          description: "Gangtok sightseeing and Nathula Pass trip.",
-          location: "Gangtok → Lachung",
-          members: "15-20 people",
-          price: "₹12,999",
-          image: "https://source.unsplash.com/600x400/?gangtok",
-        },
-        {
-          id: "pkg2",
-          name: "Premium Sikkim",
-          description: "Yumthang Valley + Gurudongmar Lake + Luxury stay.",
-          location: "Gangtok → Lachung",
-          members: "8-12 people",
-          price: "₹28,999",
-          image: "https://source.unsplash.com/600x400/?lachung",
-        },
-        {
-          id: "pkg3",
-          name: "Adventure Sikkim",
-          description: "Includes trekking & river rafting experience.",
-          location: "Gangtok → Lachung",
-          members: "10-14 people",
-          price: "₹22,500",
-          image: "https://source.unsplash.com/600x400/?sikkim,trekking",
-        },
-      ],
-    },
-    // add Arunachal, Nagaland, Tripura etc in same way
-  ],
-};
+import { toursData } from "../data/NEtpackage";
 
 const whyBookWithUs = [
   "Expertly crafted itineraries by travel specialists",
@@ -176,10 +83,10 @@ export default function PTPackage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8 md:p-16">
           <div className="max-w-7xl mx-auto">
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-3xl md:text-5xl text-center font-bold text-white mb-4">
               {tour.name}
             </h1>
-            <div className="flex flex-wrap items-center gap-4 text-white">
+            {/* <div className="flex flex-wrap items-center gap-4 text-white">
               <div className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-yellow-500" />
                 <span>
@@ -200,7 +107,7 @@ export default function PTPackage() {
                 <FaStar className="text-yellow-500" />
                 <span>4.8/5</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -223,12 +130,12 @@ export default function PTPackage() {
                     <FaArrowLeft />
                     <span>Back</span>
                   </button>
-                  <button
+                  {/* <button
                     onClick={() => navigate(`/popular-tours/${rawCategory}`)}
                     className="px-3 py-2 rounded-md border border-zinc-200 text-zinc-700"
                   >
                     View all {rawCategory}
-                  </button>
+                  </button> */}
                 </div>
               </div>
 
@@ -236,7 +143,7 @@ export default function PTPackage() {
                 {packages.map((pkg) => (
                   <div
                     key={pkg.id}
-                    className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border"
+                    className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300"
                   >
                     <div className="relative">
                       <img
@@ -268,14 +175,14 @@ export default function PTPackage() {
                         </div>
                       </div>
 
-                      <div className="flex justify-between items-center mb-4">
+                      {/* <div className="flex justify-between items-center mb-4">
                         <span className="text-lg font-bold text-yellow-600">
                           {pkg.price}
                         </span>
                         <span className="text-xs text-zinc-500">
                           per person
                         </span>
-                      </div>
+                      </div> */}
 
                       <div className="flex gap-3">
                         <button
@@ -285,7 +192,9 @@ export default function PTPackage() {
                           View Details
                         </button>
                         <button
-                          onClick={() => handleCallNow(pkg.name)}
+                          onClick={() =>
+                            (window.location.href = "tel:+919337124745")
+                          }
                           className="flex-1 bg-white border border-yellow-600 text-yellow-700 font-medium py-2 px-4 rounded-full text-sm shadow-sm hover:bg-yellow-50 transition-all duration-300"
                         >
                           Call Now
@@ -331,7 +240,7 @@ export default function PTPackage() {
                   </div>
                   <div>
                     <p className="text-sm opacity-80">Call us now</p>
-                    <p className="font-semibold">+91 98765 43210</p>
+                    <p className="font-semibold">+91 9337124745</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -340,11 +249,14 @@ export default function PTPackage() {
                   </div>
                   <div>
                     <p className="text-sm opacity-80">Email us</p>
-                    <p className="font-semibold">info@premiumtours.com</p>
+                    <p className="font-semibold">info@easternindiatravels.com</p>
                   </div>
                 </div>
               </div>
-              <button className="mt-6 w-full bg-white text-yellow-700 font-semibold py-3 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300">
+              <button
+                onClick={() => (window.location.href = "tel:+919337124745")}
+                className="mt-6 w-full bg-white text-yellow-700 font-semibold py-3 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300"
+              >
                 Request Callback
               </button>
             </div>

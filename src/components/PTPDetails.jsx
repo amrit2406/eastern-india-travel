@@ -2,169 +2,32 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ArrowLeft } from "lucide-react";
 import RelatedT from "./RelatedT";
 import Testi2 from "./home/Testi2";
-
-/**
- * PTPDetails.jsx
- * - Route expected: /popular-tours/:category/:tourId/:packageId?
- * - Matches the exact TourDetails design you provided.
- *
- * Note: move the toursData object to a shared file later if desired.
- */
-
-// sample tours data matching the fields used in the design
-const toursData = {
-  northeast: [
-    {
-      id: "meghalaya",
-      name: "Meghalaya Tour",
-      banner: "https://source.unsplash.com/1600x900/?meghalaya,waterfall",
-      intro:
-        "Discover Meghalaya — the abode of clouds. Waterfalls, living root bridges, crystal clear rivers and lush green landscapes. A rejuvenating and scenic getaway.",
-      shortItinerary: [
-        "Arrival at Shillong & local sightseeing",
-        "Cherrapunji — waterfalls & viewpoints",
-        "Dawki — Umngot River boating",
-        "Mawlynnong — Asia's cleanest village",
-        "Departure via Guwahati",
-      ],
-      expect: [
-        "Comfortable stays with local experiences",
-        "Expert local guides & private transport",
-        "Easy-moderate walking and viewpoint visits",
-        "Authentic tribal food tastings",
-      ],
-      itinerary: [
-        {
-          day: "Day 1 - Arrival & Shillong",
-          detail:
-            "Arrive Shillong, check-in at the hotel, visit Ward's Lake & local markets. Evening cultural walk and dinner at a local cafe.",
-        },
-        {
-          day: "Day 2 - Cherrapunji & Nohkalikai Falls",
-          detail:
-            "Drive to Cherrapunji, visit Nohkalikai Falls, Seven Sisters Falls and Mawsmai Caves. Sunset viewpoint at Eco Park.",
-        },
-        {
-          day: "Day 3 - Dawki & Umngot",
-          detail:
-            "Drive to Dawki for boating on the crystal-clear Umngot river and visit the India-Bangladesh border viewpoint.",
-        },
-        {
-          day: "Day 4 - Mawlynnong & Living Root Bridge (optional)",
-          detail:
-            "Visit Mawlynnong village, explore living root bridge area or nearby trails and enjoy village life.",
-        },
-        {
-          day: "Day 5 - Departure",
-          detail:
-            "Return to Guwahati / Shillong for onward journey. Drop at airport / railway station.",
-        },
-      ],
-      gallery: [
-        "https://source.unsplash.com/800x600/?shillong",
-        "https://source.unsplash.com/800x600/?cherrapunji",
-        "https://source.unsplash.com/800x600/?dawki",
-        "https://source.unsplash.com/800x600/?meghalaya",
-        "https://source.unsplash.com/800x600/?mawlynnong",
-      ],
-      shortDescription:
-        "5 Days • Comfortable hotels • Local meals • Small group tours",
-      priceFrom: "₹15,999",
-      groupSize: "Up to 12 people",
-      bestTime: "Oct - Mar",
-      packages: [
-        {
-          id: "pkg1",
-          name: "Standard Package",
-          price: "₹15,999",
-          description: "Comfort stays, standard meals, shared transport.",
-        },
-        {
-          id: "pkg2",
-          name: "Luxury Package",
-          price: "₹24,999",
-          description: "Premium stays, private transport & experiences.",
-        },
-      ],
-    },
-
-    {
-      id: "assam-safari",
-      name: "Assam Wildlife Safari",
-      banner: "https://source.unsplash.com/1600x900/?kaziranga,elephant",
-      intro:
-        "Explore Assam's wild heart — Kaziranga National Park, tea gardens, and riverine landscapes. Ideal for wildlife lovers and nature photographers.",
-      shortItinerary: [
-        "Guwahati arrival & city highlights",
-        "Kaziranga Safari experience",
-        "Tea garden visit & local culture",
-        "Departure via Guwahati",
-      ],
-      expect: [
-        "Multiple jeep/elephant safaris (park entry included)",
-        "Comfortable lodge stays near the park",
-        "Local Assamese cuisine & cultural visits",
-      ],
-      itinerary: [
-        {
-          day: "Day 1 - Arrive Guwahati",
-          detail:
-            "Arrive Guwahati, visit Kamakhya Temple and local markets. Overnight in Guwahati.",
-        },
-        {
-          day: "Day 2 - Travel to Kaziranga",
-          detail: "Drive to Kaziranga, evening nature walk and lodge check-in.",
-        },
-        {
-          day: "Day 3 - Safaris in Kaziranga",
-          detail:
-            "Early morning elephant/jeep safari, afternoon jeep safari and bird watching.",
-        },
-        {
-          day: "Day 4 - Local excursions",
-          detail:
-            "Visit tea gardens, interact with local communities and return to Guwahati.",
-        },
-      ],
-      gallery: [
-        "https://source.unsplash.com/800x600/?kaziranga",
-        "https://source.unsplash.com/800x600/?assam,tea",
-        "https://source.unsplash.com/800x600/?elephant",
-      ],
-      shortDescription: "4 Days • Wildlife Safaris • Lodge stays",
-      priceFrom: "₹12,499",
-      groupSize: "Up to 12 people",
-      bestTime: "Nov - Apr",
-      packages: [
-        {
-          id: "pkg1",
-          name: "Safari Standard",
-          price: "₹12,499",
-          description: "Two safaris + stay.",
-        },
-      ],
-    },
-  ],
-};
+import { toursData } from "../data/NetpDetails";
 
 const PTPDetails = () => {
   const navigate = useNavigate();
   const { category, tourId, packageId } = useParams();
 
-  // normalize category for lookup ("north-east" -> "northeast")
+  // Normalize category for lookup ("north-east" -> "northeast")
   const categoryKey = (category || "").replace(/[-\s]/g, "").toLowerCase();
 
-  // find tour
-  const tour =
-    (toursData[categoryKey] || []).find((t) => t.id === (tourId || "")) || null;
+  // Find tour by iterating over all groups (like Code A)
+  let tour = null;
+  for (const key in toursData) {
+    const foundTour = toursData[key].find((t) => t.id === tourId);
+    if (foundTour) {
+      tour = foundTour;
+      break;
+    }
+  }
 
-  // find package (optional)
-  const pkg =
-    tour?.packages?.find((p) => p.id === (packageId || "")) ||
-    (tour?.packages && tour.packages[0]) ||
-    null;
+  // Find package (optional)
+  const pkg = tour?.packages?.find((p) => p.id === packageId) || 
+             (tour?.packages && tour.packages[0]) || 
+             null;
 
   const [activeTab, setActiveTab] = useState("overview");
 
@@ -198,10 +61,34 @@ const PTPDetails = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real app you'd POST this to backend / send email / etc.
-    console.log("Form submitted:", formData, { tourId, packageId });
-    alert("Thank you for your enquiry! We'll get back to you soon.");
-    // Reset form
+
+    const whatsappNumber = "919337124745"; // Include country code (India: 91)
+
+    // Build WhatsApp message
+    const message = `
+*New Tour Enquiry*
+---------------------------------
+👤 Name: ${formData.name}
+📞 Phone: ${formData.number}
+📧 Email: ${formData.email}
+📅 Arrival Date: ${formData.arrivalDate}
+📅 Departure Date: ${formData.departureDate}
+👥 Persons: ${formData.persons}
+👶 Children: ${formData.children}
+📝 Message: ${formData.message || "N/A"}
+---------------------------------
+🌍 Tour: ${tour?.name || ""} - ${pkg?.name || ""}
+  `;
+
+    // Encode message for URL
+    const whatsappURL = `https://wa.me/${9337124745}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    // Open WhatsApp
+    window.open(whatsappURL, "_blank");
+
+    // Optionally reset form
     setFormData({
       name: "",
       number: "",
@@ -214,7 +101,7 @@ const PTPDetails = () => {
     });
   };
 
-  // Scroll to section function (keeps same offset as your design)
+  // Scroll to section function
   const scrollToSection = (section) => {
     setActiveTab(section);
     const refs = {
@@ -259,17 +146,38 @@ const PTPDetails = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [activeTab]);
 
-  // not found UI
-  if (!tour) {
+  // Not found UI
+  if (!tour || !pkg) {
     return (
-      <div className="bg-white text-gray-800 h-screen flex items-center justify-center">
-        <h1 className="text-2xl text-red-500">Tour not found</h1>
+      <div className="min-h-screen flex items-center justify-center p-8 bg-gradient-to-br from-stone-50 to-amber-50">
+        <div className="max-w-xl text-center">
+          <h2 className="text-2xl font-bold mb-4 text-red-500">
+            Tour or package not found
+          </h2>
+          <p className="text-zinc-600 mb-6">
+            We couldn't find that tour or package.
+          </p>
+          <div className="flex gap-3 justify-center">
+            <button
+              onClick={() => navigate(-1)}
+              className="px-4 py-2 rounded-md bg-amber-500 text-white"
+            >
+              Go Back
+            </button>
+            <button
+              onClick={() => navigate("/")}
+              className="px-4 py-2 rounded-md border border-zinc-300"
+            >
+              Home
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
 
-  // hero banner image
-  const heroBanner = tour.banner || tour.gallery?.[0] || "";
+  // Hero banner image (using package banner like Code A)
+  const heroBanner = pkg.banner;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-stone-50 to-amber-50 text-gray-800 font-inter antialiased relative overflow-hidden">
@@ -288,29 +196,16 @@ const PTPDetails = () => {
             className="text-center z-10 px-4"
           >
             <h1
-              className="text-5xl md:text-5xl font-bold mb-4 tracking-wide"
+              className="text-5xl md:text-4xl font-bold mb-4 tracking-wide"
               style={{
                 color: "#e8bb47ff",
                 textShadow: "0 4px 12px rgba(0,0,0,0.3)",
               }}
             >
-              {tour.name}
+              {tour.name} - {pkg.name}
             </h1>
-
-            {/* show selected package (if present) */}
-            {pkg && (
-              <div className="mt-3 flex items-center justify-center gap-3">
-                <span className="px-4 py-2 rounded-full bg-yellow-100 text-yellow-800 border border-yellow-300 shadow-sm font-semibold">
-                  {pkg.name}
-                </span>
-                {/* <span className="px-4 py-2 rounded-full bg-white/10 text-white/90 font-bold">
-                  {pkg.price}
-                </span> */}
-              </div>
-            )}
-
             <div
-              className="w-24 h-1.5 mx-auto rounded-full mt-4"
+              className="w-24 h-1.5 mx-auto rounded-full"
               style={{ backgroundColor: "#efb010ff" }}
             ></div>
           </motion.div>
@@ -401,18 +296,18 @@ const PTPDetails = () => {
               >
                 {/* Heading */}
                 <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
-                  <h2 className="text-3xl  font-extrabold text-[#B8860B] flex items-center gap-3">
+                  <h2 className="text-3xl font-extrabold text-[#B8860B] flex items-center gap-3">
                     Overview
                   </h2>
 
                   <span className="text-sm font-medium px-5 py-2 rounded-full bg-yellow-100 text-yellow-800 border border-yellow-300 shadow-sm">
-                    Journey Highlights
+                    {pkg.days} Days / {pkg.nights} Nights
                   </span>
                 </div>
 
                 {/* Description */}
                 <p className="text-gray-700 text-lg md:text-md leading-relaxed p-2 transition-all duration-300">
-                  {tour.intro}
+                  {pkg.intro}
                 </p>
               </motion.div>
             </div>
@@ -437,13 +332,13 @@ const PTPDetails = () => {
                       </span>
                     </h2>
                     <span className="ml-4 text-sm font-semibold px-4 py-1.5 rounded-full bg-yellow-100 text-yellow-800 border border-yellow-300 shadow-sm">
-                      {tour.shortItinerary.length} Days
+                      {pkg.shortItinerary.length} Days
                     </span>
                   </div>
 
                   {/* Items */}
                   <div className="flex flex-col gap-6">
-                    {tour.shortItinerary.map((item, idx) => (
+                    {pkg.shortItinerary.map((item, idx) => (
                       <div
                         key={idx}
                         className="flex items-start p-6 rounded-2xl bg-white shadow-md border border-amber-100 hover:shadow-xl hover:border-yellow-400 transition-all duration-300"
@@ -475,13 +370,6 @@ const PTPDetails = () => {
                   transition={{ duration: 0.7 }}
                   viewport={{ once: true }}
                 >
-                  {/* Heading */}
-                  {/* <h2 className="text-3xl font-extrabold mb-10 text-[#B8860B] flex items-center gap-3">
-                    <span className="bg-gradient-to-r from-yellow-700 to-yellow-500 bg-clip-text text-transparent">
-                      Tour Inclusions & Details
-                    </span>
-                  </h2> */}
-
                   {/* Cards in Column */}
                   <div className="flex flex-col gap-6">
                     {/* Price Includes */}
@@ -563,8 +451,8 @@ const PTPDetails = () => {
                   </h2>
 
                   {/* Items */}
-                  <div className="grid gap-4">
-                    {tour.expect.map((item, idx) => (
+                  <div className="grid gap-4 md:grid-cols-2">
+                    {pkg.expect.map((item, idx) => (
                       <div
                         key={idx}
                         className="flex items-start p-6 rounded-2xl bg-white shadow-md border border-amber-100 hover:shadow-lg hover:border-yellow-400 transition-all duration-300 group"
@@ -628,7 +516,7 @@ const PTPDetails = () => {
 
                   {/* Itinerary Items */}
                   <div className="space-y-10">
-                    {tour.itinerary.map((day, idx) => (
+                    {pkg.itinerary.map((day, idx) => (
                       <motion.div
                         key={idx}
                         initial={{ opacity: 0, y: 20 }}
@@ -677,13 +565,13 @@ const PTPDetails = () => {
                     Gallery
                   </h2>
                   <span className="text-sm font-semibold px-5 py-2 rounded-full bg-yellow-100 text-yellow-800 border border-yellow-300 shadow-sm">
-                    {tour.gallery.length} Photos
+                    {pkg.gallery.length} Photos
                   </span>
                 </div>
 
                 {/* Gallery Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {tour.gallery.map((img, idx) => (
+                  {pkg.gallery.map((img, idx) => (
                     <motion.div
                       key={idx}
                       initial={{ opacity: 0, y: 30 }}
@@ -699,13 +587,6 @@ const PTPDetails = () => {
                         className="w-full h-60 object-cover rounded-xl transition-transform duration-700 group-hover:scale-110"
                       />
 
-                      {/* Overlay */}
-                      {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6 rounded-xl">
-                        <button className="px-4 py-2 bg-[#B8860B] text-white text-sm font-semibold rounded-full shadow-md hover:bg-yellow-600 transition-all duration-300">
-                          View Image
-                        </button>
-                      </div> */}
-
                       {/* Subtle Top Reflection Effect */}
                       <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
                     </motion.div>
@@ -719,6 +600,15 @@ const PTPDetails = () => {
         {/* Right Sidebar */}
         <div className="w-full lg:w-1/3">
           <div className="sticky top-32 space-y-8">
+            {/* Back Button */}
+            <button
+              onClick={() => navigate(-1)}
+              className="flex items-center gap-2 text-amber-700 hover:text-amber-900 transition-colors font-medium"
+            >
+              <ArrowLeft size={16} />
+              <span>Back to Packages</span>
+            </button>
+
             {/* Tour Information */}
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-md border border-amber-100">
               <h3
@@ -731,16 +621,24 @@ const PTPDetails = () => {
                 <div className="flex justify-between">
                   <span className="text-gray-600">Duration:</span>
                   <span className="font-medium">
-                    {tour.shortItinerary.length} Days
+                    {pkg.days} Days / {pkg.nights} Nights
                   </span>
                 </div>
                 <div className="flex justify-between">
+                  <span className="text-gray-600">Start Point:</span>
+                  <span className="font-medium">{pkg.start}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">End Point:</span>
+                  <span className="font-medium">{pkg.end}</span>
+                </div>
+                <div className="flex justify-between">
                   <span className="text-gray-600">Group Size:</span>
-                  <span className="font-medium">{tour.groupSize}</span>
+                  <span className="font-medium">Up to 12 people</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-600">Best Time:</span>
-                  <span className="font-medium">{tour.bestTime}</span>
+                  <span className="font-medium">Oct - Mar</span>
                 </div>
               </div>
             </div>
@@ -753,6 +651,23 @@ const PTPDetails = () => {
               >
                 Plan Your Journey
               </h3>
+              <p className="text-center my-6">
+                Call us:{" "}
+                <a
+                  href="tel:+919337124745"
+                  className="text-yellow-700 hover:underline"
+                >
+                  +91 9337124745
+                </a>{" "}
+                /{" "}
+                <a
+                  href="tel:+918456840041"
+                  className="text-yellow-700 hover:underline"
+                >
+                  +91 8456840041
+                </a>{" "}
+                or fill the booking form below
+              </p>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -873,7 +788,7 @@ const PTPDetails = () => {
       <RelatedT />
       <Testi2 />
     </div>
-  );
+  ); 
 };
 
 export default PTPDetails;
