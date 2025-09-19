@@ -221,7 +221,7 @@ export default function PackageDetailsPage() {
             className="text-center z-10 px-4"
           >
             <h1
-              className="text-5xl md:text-4xl font-bold mb-4 tracking-wide"
+              className="text-2xl md:text-4xl font-bold mb-4 tracking-wide"
               style={{
                 color: "#e8bb47ff", // Darker golden color
                 textShadow: "0 4px 12px rgba(0,0,0,0.3)",
@@ -229,7 +229,7 @@ export default function PackageDetailsPage() {
             >
               {pkg.name}
             </h1>
-            <div className="flex flex-wrap items-center justify-center gap-4 text-white">
+            {/* <div className="flex flex-wrap items-center justify-center gap-4 text-white">
               <div className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-[#D4A017]" />
                 <span>{pkg.location}</span>
@@ -246,7 +246,7 @@ export default function PackageDetailsPage() {
                 <FaStar className="text-[#D4A017]" />
                 <span>{pkg.rating}</span>
               </div>
-            </div>
+            </div> */}
             <div
               className="w-24 h-1.5 mx-auto rounded-full mt-4"
               style={{ backgroundColor: "#efb010ff" }}
@@ -506,9 +506,9 @@ export default function PackageDetailsPage() {
                 </div>
 
                 {/* Timeline */}
-                <div className="relative pl-10">
+                <div className="relative pl-0 md:pl-10">
                   {/* Vertical Line */}
-                  <div className="absolute top-0 left-16 bottom-0 w-0.5 bg-gradient-to-b from-yellow-400 to-yellow-600"></div>
+                  <div className="absolute hidden sm:block top-0 left-16 bottom-0 w-0.5 bg-gradient-to-b from-yellow-400 to-yellow-600"></div>
 
                   {/* Itinerary Items */}
                   <div className="space-y-10">
@@ -522,7 +522,7 @@ export default function PackageDetailsPage() {
                         className="relative flex items-start gap-6"
                       >
                         {/* Day Badge */}
-                        <div className="relative z-10">
+                        <div className="relative z-10 hidden sm:block">
                           <span className="w-12 h-12 flex items-center justify-center rounded-full text-white font-bold text-lg shadow-md bg-gradient-to-br from-yellow-700 to-yellow-500">
                             {idx + 1}
                           </span>

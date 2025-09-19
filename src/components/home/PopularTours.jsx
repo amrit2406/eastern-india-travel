@@ -4,7 +4,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Phone, Eye, MapPin } from "lucide-react";
+import { Phone, ArrowRight, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { tours } from "../../data/Odtour";
 
@@ -86,7 +86,7 @@ const PopularTours = ({ showHeading = true }) => {
               to={`/tour-package/${tour.id}`}
               className="flex-1 flex items-center justify-center gap-2 border border-zinc-300 text-zinc-700 py-3 rounded-lg font-medium hover:border-yellow-600 hover:text-yellow-700 hover:shadow-md transition-all duration-300"
             >
-              <Eye size={16} /> Details
+              Details <ArrowRight size={16} />
             </Link>
           </div>
         </div>
@@ -108,7 +108,7 @@ const PopularTours = ({ showHeading = true }) => {
           >
             <motion.h2
               variants={itemVariants}
-              className="text-5xl md:text-5xl font-extrabold tracking-tight leading-tight drop-shadow-sm bg-gradient-to-r from-amber-600 to-amber-800 bg-clip-text text-transparent"
+              className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight drop-shadow-sm bg-gradient-to-r from-amber-600 to-amber-800 bg-clip-text text-transparent"
             >
               Popular Tours
             </motion.h2>

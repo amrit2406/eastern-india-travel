@@ -4,7 +4,7 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Phone, Eye, MapPin } from "lucide-react";
+import { Phone, ArrowRight, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { tours } from "../../data/NEtour";
 
@@ -83,7 +83,7 @@ const PopularTours2 = () => {
               to={`/popular-tours/${tour.category}/${tour.id}`} // 🔹 Updated route
               className="flex-1 flex items-center justify-center gap-2 border border-zinc-300 text-zinc-700 py-3 rounded-lg font-medium hover:border-yellow-600 hover:text-yellow-700 hover:shadow-md transition-all duration-300"
             >
-              <Eye size={16} /> Details
+              Details <ArrowRight size={16} />
             </Link>
           </div>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { FaMapMarkerAlt, FaCalendarAlt, FaUserFriends, FaRupeeSign, FaStar, FaCheck, FaArrowRight, FaLeaf, FaUsers, FaShieldAlt, FaMagic } from "react-icons/fa";
 import PopularTours from "../components/home/PopularTours";
 import PopularTours2 from "../components/home/PopularTours2";
+import WhatsAppFloatingButton from "../components/WhatsAppFloatButton";
 
 const packages = [
   {
@@ -209,15 +210,16 @@ export default function ToursPage() {
                 <div className="absolute -top-6 -right-6 w-24 h-24 bg-yellow-300 rounded-lg transform rotate-12 z-0"></div>
                 <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-yellow-400 rounded-lg transform -rotate-12 z-0"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1429839671814-0f6a02b2e0ae?auto=format&fit=crop&w=700&q=80"
+                  src="https://img.freepik.com/free-vector/flat-people-asking-questions_23-2148929673.jpg"
                   alt="Why Choose Us"
-                  className="w-full max-w-md h-64 object-cover rounded-xl shadow-lg border-4 border-yellow-300 relative z-10"
+                  className="w-full h-84 object-cover rounded-xl shadow-lg border-4 border-yellow-300 relative z-10"
                 />
               </div>
             </div>
           </div>
         </div>
       </section>
+      <WhatsAppFloatingButton />
     </main>
   );
 }

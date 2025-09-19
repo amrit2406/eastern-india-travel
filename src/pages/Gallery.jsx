@@ -9,6 +9,7 @@ import g6 from "../assets/g6.png";
 import g7 from "../assets/g7.png";
 import g8 from "../assets/g8.png";
 import g9 from "../assets/g9.png";
+import WhatsAppFloatingButton from "../components/WhatsAppFloatButton";
 
 const images = [
   { id: 1, src: g1, title: "Majestic Himalayas", category: "nature" },
@@ -179,6 +180,8 @@ export default function GalleryPage() {
           </div>
         </div>
       )}
+
+      <WhatsAppFloatingButton />
     </main>
   );
 }

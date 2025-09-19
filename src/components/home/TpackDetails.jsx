@@ -69,62 +69,6 @@ export default function TourDetailsPage() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Main Content - Explore Tour Packages */}
           <div className="lg:w-2/3">
-            {/* Tour Overview */}
-            {/* <div className="bg-white rounded-2xl shadow-md p-6 mb-8">
-              <h2 className="text-2xl font-bold text-zinc-800 mb-4">About This Tour</h2>
-              <p className="text-zinc-700 mb-6">
-                {tour.description}
-              </p>
-              
-              <h3 className="text-xl font-bold text-zinc-800 mb-3">Tour Highlights</h3>
-              <ul className="space-y-2 mb-6">
-                {tour.highlights.map((highlight, index) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <FaCheck className="text-[#D4A017] mt-1 flex-shrink-0" />
-                    <span className="text-zinc-700">{highlight}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <h3 className="text-xl font-bold text-zinc-800 mb-3">Itinerary</h3>
-              <ul className="space-y-3 mb-6">
-                {tour.itinerary.map((day, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="bg-[#D4A017] text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <span className="text-zinc-700">{day}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <h3 className="text-xl font-bold text-zinc-800 mb-3">What's Included</h3>
-                  <ul className="space-y-2">
-                    {tour.includes.map((item, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <FaCheck className="text-[#D4A017] mt-1 flex-shrink-0" />
-                        <span className="text-zinc-700">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div>
-                  <h3 className="text-xl font-bold text-zinc-800 mb-3">What's Excluded</h3>
-                  <ul className="space-y-2">
-                    {tour.excludes.map((item, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <div className="text-red-500 mt-1 flex-shrink-0">×</div>
-                        <span className="text-zinc-700">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div> */}
-            
             {/* Tour Packages Section */}
             <div className="bg-white rounded-2xl shadow-md p-6 mb-8">
               <div className="flex items-center justify-between mb-6">

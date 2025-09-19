@@ -14,6 +14,7 @@ import LogoSlider from "../components/home/TourLogo";
 import ToursSection from "../components/home/Tours";
 import TravelGuides from "../components/home/TravelGuides";
 import WhyChooseUs from "../components/home/Why";
+import WhatsAppFloatingButton from "../components/WhatsAppFloatButton";
 
 
 export const Home = () => {
@@ -35,6 +36,7 @@ export const Home = () => {
       <Faq2 />
       <ContactUsSection />
       <LogoSlider />
+      <WhatsAppFloatingButton />
     </main>
   );
 };

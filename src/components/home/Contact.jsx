@@ -81,6 +81,9 @@ export default function ContactUsSection() {
                       <a href="tel:+919337124745" className="text-yellow-700 mt-1 hover:text-yellow-600 transition-colors block">
                         +91 9337124745
                       </a>
+                      <a href="tel:+918456840041" className="text-yellow-700 mt-1 hover:text-yellow-600 transition-colors block">
+                        +91 8456840041
+                      </a>
                       <div className="flex items-center text-yellow-600 text-sm mt-1">
                         <FaClock className="mr-1" />
                         <span>Mon-Sat: 9am-7pm</span>

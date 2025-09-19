@@ -1,8 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaBuilding, FaPlane, FaSmile } from "react-icons/fa";
+import { useMediaQuery } from "react-responsive";
 
 export default function AboutSection() {
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+
   return (
     <section className="bg-white text-zinc-900 py-18 px-6 sm:px-10 lg:px-20">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 items-center gap-16 lg:gap-24">
@@ -10,7 +13,7 @@ export default function AboutSection() {
         {/* Left: Image & Decorative Elements */}
         <motion.div
           className="relative order-2 lg:order-1"
-          initial={{ opacity: 0, x: -60 }}
+          initial={{ opacity: 0, x: isMobile ? 0 : -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -34,7 +37,7 @@ export default function AboutSection() {
         {/* Right: Text Content */}
         <motion.div
           className="order-1 lg:order-2"
-          initial={{ opacity: 0, x: 60 }}
+          initial={{ opacity: 0, x: isMobile ? 0 : 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}

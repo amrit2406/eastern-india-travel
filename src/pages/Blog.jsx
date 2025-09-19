@@ -6,6 +6,7 @@ import { FaCalendarAlt, FaUser, FaQuoteLeft, FaArrowRight } from "react-icons/fa
 import odishaTripImg from "../assets/OdishaRoad.jpg";
 import konarkTempleImg from "../assets/konark.jpg";
 import bhubaneswarImg from "../assets/lingaraj.jpg";
+import WhatsAppFloatingButton from "../components/WhatsAppFloatButton";
 
 function Blog() {
   const blogPosts = [
@@ -152,6 +153,7 @@ Lastly, fuel up before heading to distant attractions like Nandankanan Zoo or Kh
           </button>
         </div>
       </section>
+      <WhatsAppFloatingButton />
     </>
   );
 }

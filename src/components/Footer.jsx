@@ -8,6 +8,7 @@ import {
   FaPhoneAlt,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const [form, setForm] = useState({
@@ -85,23 +86,54 @@ export default function Footer() {
               Quick Links
             </h3>
             <ul className="space-y-2 text-zinc-400">
-              {[
-                "Home",
-                "Tours",
-                "Gallery",
-                "FAQ",
-                "Contact",
-                "Blog",
-              ].map((link) => (
-                <li key={link}>
-                  <a
-                    href={`/${link.toLowerCase().replace(/ /g, "")}`}
-                    className="hover:text-amber-500 transition-colors duration-300"
-                  >
-                    {link}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="/"
+                  className="hover:text-amber-500 transition-colors duration-300"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/tours"
+                  className="hover:text-amber-500 transition-colors duration-300"
+                >
+                  Tours
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/gallery"
+                  className="hover:text-amber-500 transition-colors duration-300"
+                >
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/destination"
+                  className="hover:text-amber-500 transition-colors duration-300"
+                >
+                  Destination
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className="hover:text-amber-500 transition-colors duration-300"
+                >
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/blog"
+                  className="hover:text-amber-500 transition-colors duration-300"
+                >
+                  Blog
+                </a>
+              </li>
             </ul>
             <div className="flex space-x-4 mt-6">
               <a
@@ -140,42 +172,96 @@ export default function Footer() {
         <div className="lg:col-span-2 grid grid-cols-2 gap-8 text-zinc-400">
           <div>
             <h4 className="text-lg font-semibold text-white mb-2">Odisha</h4>
-            <p>
-              Devotional Tours <br /> Tribal Tours <br /> Wildlife & Adventure
-              Tours <br /> Senior Citizen Tours
+            <p className="flex flex-col gap-1">
+              <Link
+                to="/tour-package/devotional"
+                className="hover:text-yellow-400"
+              >
+                Devotional Tours
+              </Link>
+              <Link to="/tour-package/tribal" className="hover:text-yellow-400">
+                Tribal Tours
+              </Link>
+              <Link to="/tour-package/wild" className="hover:text-yellow-400">
+                Wildlife & Adventure Tours
+              </Link>
+              <Link to="/tour-package/senior" className="hover:text-yellow-400">
+                Senior Citizen Tours
+              </Link>
             </p>
           </div>
+
           <div>
             <h4 className="text-lg font-semibold text-white mb-2">
               North East (Sikkim & Darjeeling)
             </h4>
-            <p>
-              Offbeat & Scenic Excursion <br /> Honeymoon Special Tours <br />{" "}
-              Northeast Combo Tours
+            <p className="flex flex-col gap-1">
+              <Link
+                to="/popular-tours/north-east/offbeat"
+                className="hover:text-yellow-400"
+              >
+                Offbeat & Scenic Excursion
+              </Link>
+              <Link
+                to="/popular-tours/north-east/honeymoon"
+                className="hover:text-yellow-400"
+              >
+                Honeymoon Special Tours
+              </Link>
+              <Link
+                to="/popular-tours/north-east/combo"
+                className="hover:text-yellow-400"
+              >
+                Northeast Combo Tours
+              </Link>
+              <Link
+                to="/popular-tours/north-east/arunachal"
+                className="hover:text-yellow-400"
+              >
+                Arunchal Pradesh Tour
+              </Link>
             </p>
           </div>
+
           <div>
-            <h4 className="text-lg font-semibold text-white mb-2">Assam</h4>
+            <h4 className="text-lg font-semibold text-white mb-2">
+              <Link to="/packages/assam" className="hover:text-yellow-400">
+                Assam
+              </Link>
+            </h4>
             <p>
               Wildlife <br /> Spiritual Tours <br /> Scenic Tours
             </p>
           </div>
+
           <div>
-            <h4 className="text-lg font-semibold text-white mb-2">Kolkata</h4>
+            <h4 className="text-lg font-semibold text-white mb-2">
+              <Link to="/packages/kolkata" className="hover:text-yellow-400">
+                Kolkata
+              </Link>
+            </h4>
             <p>
               City Tours <br /> Sundarban Tours <br /> Gangasagar Tours
             </p>
           </div>
+
           <div>
             <h4 className="text-lg font-semibold text-white mb-2">
-              Uttar Pradesh
+              <Link to="/packages/up" className="hover:text-yellow-400">
+                Uttar Pradesh
+              </Link>
             </h4>
             <p>
               Varanasi <br /> Prayagraj <br /> Mathura <br /> Agra Tours
             </p>
           </div>
+
           <div>
-            <h4 className="text-lg font-semibold text-white mb-2">Vizag</h4>
+            <h4 className="text-lg font-semibold text-white mb-2">
+              <Link to="/packages/vizag" className="hover:text-yellow-400">
+                Vizag
+              </Link>
+            </h4>
             <p>Vizag & Araku Valley Tours</p>
           </div>
         </div>

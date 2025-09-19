@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import WhyChooseUs from "../components/home/Why";
 import TravelGuides from "../components/home/TravelGuides";
 import Faq2 from "../components/home/Faq 2";
+import WhatsAppFloatingButton from "../components/WhatsAppFloatButton";
 
 // const team = [
 //   {
@@ -234,6 +235,8 @@ export default function AboutPage() {
           </Link>
         </div>
       </section>
+
+      <WhatsAppFloatingButton />
     </main>
   );
 }

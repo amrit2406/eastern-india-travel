@@ -1,85 +1,19 @@
 import React from "react";
 import { FaMapMarkerAlt, FaStar, FaClock, FaUsers } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { tours } from "../data/Tour";
 
-const tours = [
-  {
-    id: "darjeeling-odyssey",
-    title: "Darjeeling Himalayan Odyssey",
-    description:
-      "Experience the scenic beauty and misty mountains of Darjeeling, complete with heritage toy train rides.",
-    location: "Darjeeling",
-    duration: "5 Days",
-    groupSize: "Max 12",
-    rating: "4.8",
-    image:
-      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=700&q=80",
-  },
-  {
-    id: "sundarbans-adventure",
-    title: "Sundarbans Jungle Adventure",
-    description:
-      "Explore the world's largest mangrove forest and spot Bengal tigers in a thrilling eco-tour.",
-    location: "Sundarbans",
-    duration: "4 Days",
-    groupSize: "Max 10",
-    rating: "4.9",
-    image:
-      "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=700&q=80",
-  },
-  {
-    title: "Kolkata Culture & Heritage",
-    description:
-      "Dive into the vibrant culture, colonial architecture, and culinary delights of the 'City of Joy'.",
-    location: "Kolkata",
-    duration: "3 Days",
-    groupSize: "Max 15",
-    rating: "4.7",
-    image:
-      "https://images.unsplash.com/photo-1482062364825-616fd23b8fc1?auto=format&fit=crop&w=700&q=80",
-  },
-  {
-    title: "Meghalaya Living Root Bridges",
-    description:
-      "Discover the living root bridges, waterfalls, and misty landscapes of Meghalaya's dense forests.",
-    location: "Meghalaya",
-    duration: "6 Days",
-    groupSize: "Max 8",
-    rating: "5.0",
-    image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=700&q=80",
-  },
-  {
-    title: "Sikkim Himalayan Escape",
-    description:
-      "Journey through the pristine landscapes of Sikkim, from ancient monasteries to glacial lakes.",
-    location: "Sikkim",
-    duration: "7 Days",
-    groupSize: "Max 10",
-    rating: "4.9",
-    image:
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=700&q=80",
-  },
-  {
-    title: "Puri Beach & Temple Tour",
-    description:
-      "Experience the spiritual essence of Puri with its ancient temples and pristine beaches.",
-    location: "Puri",
-    duration: "4 Days",
-    groupSize: "Max 12",
-    rating: "4.6",
-    image:
-      "https://images.unsplash.com/photo-1516397281156-ca07cf9746fc?auto=format&fit=crop&w=700&q=80",
-  },
-];
-
-export default function RelatedT() {
+export default function PremiumToursSection() {
   const navigate = useNavigate();
+  
+  // Duplicate tours array to create enough slides for smooth looping
+  const duplicatedTours = [...tours, ...tours, ...tours]; // Creates 12 slides (3 sets of 4)
+  
   return (
     <section className="bg-gradient-to-b from-[#FFF9E6] to-white py-20 px-6 sm:px-10 lg:px-20">
       <div className="max-w-7xl mx-auto">
@@ -105,9 +39,9 @@ export default function RelatedT() {
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={30}
           slidesPerView={1}
-          // navigation
-          // pagination={{ clickable: true }}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
+          loop={true}
+          loopedSlides={tours.length} // Set to original tours count
           breakpoints={{
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
@@ -116,8 +50,8 @@ export default function RelatedT() {
           }}
           className="premium-tours-swiper"
         >
-          {tours.map((tour) => (
-            <SwiperSlide key={tour.title}>
+          {duplicatedTours.map((tour, index) => (
+            <SwiperSlide key={`${tour.title}-${index}`}>
               <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1 h-full flex flex-col border border-[#FFF9E6]">
                 {/* Image with Badge */}
                 <div className="relative overflow-hidden">
@@ -128,23 +62,8 @@ export default function RelatedT() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
 
-                  {/* Premium Badge */}
-                  {/* <div className="absolute top-4 right-4 bg-gradient-to-r from-[#D4A017] to-[#B8860B] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
-                    PREMIUM
-                  </div> */}
-
-                  {/* Rating Badge */}
-                  {/* <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-[#B8860B] text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-                    <FaStar className="text-[#D4A017]" />
-                    {tour.rating}
-                  </div> */}
-
                   {/* Location & Title */}
                   <div className="absolute bottom-4 left-4 right-4">
-                    {/* <div className="flex items-center gap-2 text-[#FFF9E6] text-sm font-medium mb-1">
-                      <FaMapMarkerAlt />
-                      <span>{tour.location}</span>
-                    </div> */}
                     <h3 className="text-xl font-bold text-white leading-tight">
                       {tour.title}
                     </h3>
@@ -156,18 +75,6 @@ export default function RelatedT() {
                   <p className="text-zinc-700 text-sm mb-6 line-clamp-3 flex-1">
                     {tour.description}
                   </p>
-
-                  {/* Tour Details */}
-                  {/* <div className="flex justify-between mb-6 text-sm">
-                    <div className="flex items-center gap-2 text-zinc-600">
-                      <FaClock className="text-[#D4A017]" />
-                      <span>{tour.duration}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-zinc-600">
-                      <FaUsers className="text-[#D4A017]" />
-                      <span>{tour.groupSize}</span>
-                    </div>
-                  </div> */}
 
                   {/* Button */}
                   <button
