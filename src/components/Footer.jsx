@@ -87,52 +87,52 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-zinc-400">
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   className="hover:text-amber-500 transition-colors duration-300"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/tours"
+                <Link
+                  to="/tours"
                   className="hover:text-amber-500 transition-colors duration-300"
                 >
                   Tours
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/gallery"
+                <Link
+                  to="/gallery"
                   className="hover:text-amber-500 transition-colors duration-300"
                 >
                   Gallery
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/destination"
+                <Link
+                  to="/destination"
                   className="hover:text-amber-500 transition-colors duration-300"
                 >
                   Destination
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="hover:text-amber-500 transition-colors duration-300"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/blog"
+                <Link
+                  to="/blog"
                   className="hover:text-amber-500 transition-colors duration-300"
                 >
                   Blog
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="flex space-x-4 mt-6">

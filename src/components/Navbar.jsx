@@ -98,9 +98,9 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-8 items-center">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className={
                   link.style
                     ? link.style
@@ -108,7 +108,7 @@ export default function Navbar() {
                 }
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -136,9 +136,9 @@ export default function Navbar() {
           >
             <div className="flex flex-col gap-6">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className={
                     link.style
                       ? link.style + " w-fit"
@@ -147,7 +147,7 @@ export default function Navbar() {
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>

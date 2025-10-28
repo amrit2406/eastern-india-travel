@@ -1,11 +1,10 @@
-
 export const tours = [
   {
     id: "assam",
     title: "Assam",
     description:
-      "Experience the scenic beauty and misty mountains of Darjeeling, complete with heritage toy train rides.",
-    location: "Darjeeling",
+      "Explore Assam’s lush tea gardens, the mighty Brahmaputra River, and the famous Kaziranga National Park, home to the one-horned rhinoceros.",
+    location: "Assam",
     duration: "5 Days",
     groupSize: "Max 12",
     rating: "4.8",
@@ -16,8 +15,8 @@ export const tours = [
     id: "kolkata",
     title: "Kolkata",
     description:
-      "Explore the world's largest mangrove forest and spot Bengal tigers in a thrilling eco-tour.",
-    location: "Sundarbans",
+      "Immerse yourself in the cultural capital of India with colonial architecture, vibrant markets, Durga Puja festivities, and mouth-watering Bengali cuisine.",
+    location: "Kolkata, West Bengal",
     duration: "4 Days",
     groupSize: "Max 10",
     rating: "4.9",
@@ -28,8 +27,8 @@ export const tours = [
     id: "up",
     title: "Uttar Pradesh",
     description:
-      "Dive into the vibrant culture, colonial architecture, and culinary delights of the 'City of Joy'.",
-    location: "Kolkata",
+      "Witness the grandeur of Uttar Pradesh with iconic landmarks like the Taj Mahal in Agra, the ghats of Varanasi, and the royal heritage of Lucknow.",
+    location: "Uttar Pradesh",
     duration: "3 Days",
     groupSize: "Max 15",
     rating: "4.7",
@@ -40,8 +39,8 @@ export const tours = [
     id: "vizag",
     title: "Vizag",
     description:
-      "Discover the living root bridges, waterfalls, and misty landscapes of Meghalaya's dense forests.",
-    location: "Meghalaya",
+      "Relax on Vizag’s pristine beaches, explore the stunning Araku Valley, and visit the ancient Borra Caves nestled in the Eastern Ghats.",
+    location: "Visakhapatnam, Andhra Pradesh",
     duration: "6 Days",
     groupSize: "Max 8",
     rating: "5.0",
